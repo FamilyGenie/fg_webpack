@@ -1,0 +1,100 @@
+<div *ngIf="!person">
+    <h4 class="no-person-warning">No person found to display. Click here: <a href="http://localhost:3000/peoplesearch"> Family List </a> to see all people available.</h4>
+</div>
+<div *ngIf="person">
+    <div class="row person-item">
+        <div class="col-xs-2 custom-input">
+            <input
+                focusDirective
+                class="form-control"
+                type="text"
+                [ngModel]="person.fName"
+                (blur)="onUpdate($event, 'fName')"
+            />
+        </div>
+        <div class="col-xs-1 custom-input">
+            <input
+                class="form-control"
+                type="text"
+                [ngModel]="person.mName"
+                (blur)="onUpdate($event, 'mName')"
+            />
+        </div>
+        <div class="col-xs-2 custom-input">
+            <input
+                class="form-control"
+                type="text"
+                [ngModel]="person.lName"
+                (blur)="onUpdate($event, 'lName')"
+            />
+        </div>
+        <div class="col-xs-1 custom-input">
+            <select
+                class="form-control"
+                [ngModel]="person.sexAtBirth"
+                (change)="onUpdate($event, 'sexAtBirth')"
+            >
+                <option *ngFor="let gender of this.dataService.genderOptions"
+                        [ngValue]="gender"
+                >
+                    {{gender}}
+                </option>
+            </select>
+        </div>
+        <div class="col-xs-2 custom-input">
+            <input
+                data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1"
+                class="form-control"
+                type="date"
+                [ngModel]="this.dataService.getFormattedDate(person.birthDate)"
+                (blur)="onUpdate($event, 'birthDate')"
+            />
+        </div>
+        <div class="col-xs-2 custom-input">
+            <input
+                class="form-control"
+                type="text"
+                [ngModel]="person.birthPlace"
+                (blur)="onUpdate($event, 'birthPlace')"
+            />
+        </div>
+        <div class="col-xs-2 custom-input">
+            <button class="btn btn-primary btn-round" (click)="showMap($event)">Map</button>
+        </div>
+    </div> 
+    <div class="row person-item">
+        <div class="col-xs-6 title bold">
+        </div>
+        <div class="col-xs-2 title bold" data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1">
+            Death Date
+        </div>
+        <div class="col-xs-2 title bold">
+            Death Place
+        </div>
+        <div class="col-xs-2 title bold">
+        </div>
+    </div>
+    <div class="row person-item">
+        <div class="col-xs-6 custom-input">
+        </div>
+        <div class="col-xs-2 custom-input">
+            <input
+                data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1"
+                class="form-control"
+                type="date"
+                [ngModel]="this.dataService.getFormattedDate(person.deathDate)"
+                (blur)="onUpdate($event, 'deathDate')"
+            />
+        </div>
+        <div class="col-xs-2 custom-input">
+            <input
+                class="form-control"
+                type="text"
+                [ngModel]="person.deathPlace"
+                (blur)="onUpdate($event, 'deathPlace')"
+            />
+        </div>
+        <div class="col-xs-2 custom-input">
+        </div>
+    </div>
+</div>

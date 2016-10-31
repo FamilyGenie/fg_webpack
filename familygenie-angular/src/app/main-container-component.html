@@ -1,0 +1,32 @@
+<div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <ul id="logoname" class="nav navbar-nav navbar-left">
+            <li>
+                <img class="navbarleft" style="height: 50px" src="../images/lamp.png">
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-left">
+            <li class="navbar-li-padding">
+                <div class="navbar-header">
+                  <a routerLink="/" class="navbar-brand">
+                    Family Genie <sup>&trade;</sup>
+                  </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-li-padding" [class.active]="router.isActive('/peoplesearch', true)">
+                <a class="navbarright" routerLink="/peoplesearch">FAMILY LIST</a>
+            </li>
+            <li *ngIf="this.authService.isLoggedIn()" class="navbar-li-padding" >
+                <a class="navbarright" (click)="logOut()">LOG OUT</a>
+            </li>
+        </ul>
+    </nav>
+    <router-outlet></router-outlet>
+    <footer class="footer navbar-fixed-bottom">
+     <div class="container footer-container">
+        copyright &copy;2016 PsychoGenealogical Research
+     </div>
+    </footer>
+</div>

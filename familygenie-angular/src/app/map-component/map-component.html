@@ -1,0 +1,38 @@
+<div class="container-fluid map-title">
+    <div class="row">
+        <div class="col-xs-6">
+            <h1>{{fullName}} Family of Origin</h1>
+        </div>
+        <div class="col-xs-2">
+            <h3 style="text-align: right; padding-top: 5px">Family as of: </h3>
+        </div>
+        <div class="col-xs-2">
+            <h3>
+            <input
+                            class="form-control"
+                            type="date"
+                            style="font-size: .75em"
+                            [ngModel]="dateFilterString"
+                            readonly
+                            (blur)="onDateUpdate($event.target.value)"
+            />
+            </h3>
+        </div>
+        <div class="col-xs-1">
+            <i class="arrow-icons fa fa-arrow-circle-down" (click)="changeDate('subYear')"></i>
+            <i class="arrow-icons fa fa-arrow-circle-up" (click)="changeDate('addYear')"></i>
+        </div>
+        <div class="col-xs-1">
+            Age:
+            <input
+                class="form-control"
+                type="text"
+                style="font-size: 1.25em"
+                [ngModel]="starAge"
+                (change)="onAgeUpdate($event.target.value)"
+            />
+        </div>
+    </div>
+</div>
+<svg class="svg-map">
+</svg>

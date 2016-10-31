@@ -1,0 +1,123 @@
+<div class="container">
+    <div class="row">
+        <div class="container-fluid col-xs-9">
+            <h1>Family Member Details</h1>
+        </div>
+        <div class="container-fluid col-xs-3">
+            <div class="container-button">
+            <button class="btn btn-primary btn-round" (click)="createPerson()">Add Person</button>
+            </div>
+            <div class="container-button">
+            <button class="btn btn-primary btn-round" (click)="deletePerson(star_id)">Del Person</button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-2 title bold">
+            First Name @Birth
+        </div>
+        <div class="col-xs-1 title bold">
+            Middle
+        </div>
+        <div class="col-xs-2 title bold">
+            Last Name @Birth
+        </div>
+        <div class="col-xs-1 title bold">
+            Sex@Birth
+        </div>
+        <div class="col-xs-2 title bold" data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1">
+            Birth Date
+        </div>
+        <div class="col-xs-2 title bold">
+            Birth Place
+        </div>
+    </div>
+    <br>
+    <div *ngIf="!this.star_id" class="container">
+        <h4>Need to select a person from the <a href="/peoplesearch">Family List</a></h4>
+    </div>
+    <div *ngIf="this.star_id" class="container">
+        <peopledetails-lineitem
+            [person]="getPersonDetails()"
+            (onUpdatePerson)="updatePerson($event)"
+        ></peopledetails-lineitem>
+    </div>
+</div>
+<br>
+<div class="container select-container">
+    <h4>Parents</h4>
+    <div class="row">
+        <div class="col-xs-2 title bold">
+            Full Name
+        </div>
+        <div class="col-xs-2 title bold">
+            Parent Type
+        </div>
+        <div class="col-xs-2 title bold">
+            Sub-Type
+        </div>
+        <div class="col-xs-2 title bold" data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1">
+            Start Date
+        </div>
+        <div class="col-xs-2 title bold" data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1">
+            End Date
+        </div>
+    </div>
+    <parentalrelationship
+        *ngFor="let parentalRelItem of getParentalRelationships()"
+        [parentalRel]="parentalRelItem"
+        (onUpdateParentalRel)="updateParentalRel($event)"
+    ></parentalrelationship>
+    <button class="btn btn-primary" (click)="createParent()">Add Parent</button>
+</div>
+<br>
+<div class="container select-container">
+    <h4>Pair Bonds</h4>
+    <div class="row">
+        <div class="col-xs-2 title bold">
+            Full Name
+        </div>
+        <div class="col-xs-2 title bold">
+            PairBond Type
+        </div>
+        <div class="col-xs-2 title bold" data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1">
+            Start Date
+        </div>
+        <div class="col-xs-2 title bold" data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1">
+            End Date
+        </div>
+    </div>
+    <pairbondrelationship
+        *ngFor="let pairBondRelItem of getPairBondRelationships()"
+        [pairBondRel]="pairBondRelItem"
+        (onUpdatePairBondRel)="updatePairBondRel($event)"
+    ></pairbondrelationship>
+    <button class="btn btn-primary" (click)="createPairBond()">Add Pair Bond</button>
+</div>
+<div class="container select-container gendername">
+    <h4>Name / Gender Changes</h4>
+    <div class="row">
+        <div class="col-xs-2 title bold" data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1">
+            Date
+        </div>
+        <div class="col-xs-2 title bold">
+            FName
+        </div>
+        <div class="col-xs-2 title bold">
+            MName
+        </div>
+        <div class="col-xs-2 title bold">
+            LName
+        </div>
+        <div class="col-xs-1 title bold">
+            Sex
+        </div>
+    </div>
+    <personchange
+        *ngFor="let personChangeItem of getPersonChanges()"
+        [personChange]="personChangeItem"
+        (onUpdatePersonChange)="updatePersonChange($event)"
+    ></personchange>
+    <button class="btn btn-primary" (click)="createPersonChange()">Add Change</button>
+</div>

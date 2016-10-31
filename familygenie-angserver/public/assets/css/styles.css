@@ -1,0 +1,261 @@
+/* Master Styles */
+.arrow-icons {
+  font-size: 2.5em;
+  color: rgb(71, 182, 82);
+  padding-top: 20px;
+}
+
+/* maybe change colors to: #27D264 */
+h1 {
+  color: #777777;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  font-size: 250%;
+}
+h2, h4 {
+  color: #777777;
+}
+
+h3 {
+	font-family: "Open Sans", Helvetica, sans-serif;
+}
+
+.container-button {
+	display: inline;
+}
+
+/* this is for the column titles in the data entry forms */
+.title {
+  text-align: center;
+  color: #777777;
+  font-weight: normal;
+}
+
+/* this is the navbar styling */
+.navbar.navbar-default {
+    background-color: #FFFFFF;
+    border-bottom: 3px solid #478652;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+}
+
+/* this is fonts in the navbar */
+.navbar-default .navbar-nav>li>a {
+    color: #777777;
+    font-weight: bold;
+}
+
+/* this is the color when the item is the active page */
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus {
+    color: #478652;
+    background-color: #FFFFFF;
+}
+
+.navbarright {
+  margin-right: 10px;
+}
+
+.navbarleft {
+  margin-left: 10px;
+}
+
+/* this is the Family Genie font */
+@font-face {
+   font-family: brandFont;
+   src: url("/assets/fonts/Lobster_1.3.otf");
+   format("opentype");
+   font-weight: 700;
+}
+
+/* this is for the word Family Genie on the left */
+.navbar-default .navbar-brand {
+	font-family: brandFont;
+	font-weight: bolder;
+	text-align: left;
+	color: #478652;
+	font-size: 2.5em;
+}
+
+/* this is to accomodate for the poor icon I took from the internet. when we get a vector image, we will either change this or remove it */
+.navbar-li-padding {
+	padding-top: 8px 
+}
+
+.coming-soon-home-page {
+  color: red;
+}
+
+/* not sure what this is for */
+.inputdiv {
+	border: 3px solid black;
+}
+
+/* this is for the fields when you click "addParent" and "Add PairBond" and you select the person */
+.dropdown {
+	background-color: #478652;
+  	color: #EEEEEE;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+/* there are for the big "material" looking boxes in the data input screens */
+div.container.select-container {
+  vertical-align: center;
+  padding: 0;
+  border: 1px solid #DDDDDD;
+  box-shadow: 3px 3px 3px #CCCCCC;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.gendername {
+  margin-top: 20px
+}
+
+/* this makes the fields square corners */
+.form-control {
+  border-radius: 0;
+}
+
+/* this makes the button square corners */
+.btn {
+	border-radius: 0;
+}
+
+/* change the color of the buttons */
+.btn-primary {
+	background-color: #478652;
+  border-color: #478652;
+}
+
+/* change the color when you hover on a button or it is clicked */
+.btn-primary:hover {
+	background-color: rgb(71, 182, 82);
+  border-color: #478652;
+	box-shadow: none;
+}
+
+.btn-primary:focus, button.btn.btn-primary:focus, button:focus, .btn:focus, .btn.btn-primary:focus {
+  background-color: rgb(71, 182, 82);
+  border-color: #478652;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgb(71, 182, 82);
+}
+
+select.form-control.ng-untouched.ng-pristine.ng-valid {
+  border-radius: 0;
+}
+
+/* these are the standard input fields on the form */
+input {
+  border-radius: .5;
+  line-height: 30px;
+  /* border: 1px solid #DDDDDD; */
+  box-shadow: inset -1px -1px 2px #AAAAAA;
+}
+
+/* this creates the glow when focus is on a field */
+input.form-control:focus {
+	border-color: rgb(71, 182, 82);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgb(71, 182, 82);
+  outline: 0 none;
+}
+
+input.form-control.can-click:hover, can-click:hover, .navbar-nav>li>a:hover {
+	cursor: pointer;
+}
+
+/* this is to move the text over in the input boxes */
+input .content {
+  padding-left: 5px;
+}
+
+/* this is the read-only input boxes */
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+	background-color: #FAFFF1;
+}
+
+/*
+.addbutton {    
+  vertical-align: middle;
+  display: block;
+  margin: 0 auto;
+}
+*/
+
+.custom-input {
+  padding-left: 5 !important;
+  padding-right: 5 !important;
+}
+
+.no-person-warning {
+  text-align: center;
+  color: orange;
+}
+
+/* this home items are for the home page styling */
+.home-table {
+    width: 80%;
+    height: 80%;
+    table-layout: auto;
+    border-color: gray;
+    margin: 0 auto;
+}
+
+.home-table-column {
+    text-align: center;
+}
+
+.home-container {
+	// background-color: #17B71D;
+	height: 250px;
+	width: 400px;
+	vertical-align: center;
+	border: 1px solid #DDDDDD;
+	box-shadow: 3px 3px 3px #CCCCCC;
+	padding: 20px;
+	margin: 10px;
+}
+
+.map-title {
+  position: fixed;
+  width: 98%
+}
+
+.svg-map {
+  height: 1400px;
+  width: 1400px;
+  padding-top: 20px
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 2em;
+  padding-top: 60px;
+  padding-bottom: 30px;
+}
+
+.footer {
+    position: absolute;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #777777;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+    background-color: rgb(243, 243, 243);
+    border-top: 2px solid #478652;
+}
+
+.footer-container {
+  padding-top: 5px;
+}
