@@ -17,23 +17,7 @@ export class ApiService {
     localStorage: CoolLocalStorage;
 
     // this is the URL of our server, will need to update if the server changes
-    url: string = "http://localhost:3500";
-
-    // We have different headers for post and get. For post, we are sending
-    // content and need a "content-type" header
-    // postHeaders: Headers;
-    // = new Headers({
-    //     "Content-Type": "application/json",
-    //     "Accept": "application/json",
-    //     "token": this.tokenHolder
-    //     // "token": this.localStorage.getItem("token")
-    // });
-
-    // GET requests do not send any content, and just accept the JSON returned
-    // getHeaders: Headers;
-    //  = new Headers({
-    //     "Accept": "application/json",
-    // });
+    url: string = "http://familygenie.me:3500";
 
     constructor(
         private http: Http,
@@ -89,8 +73,8 @@ export class ApiService {
     post(path: string, body: string): Observable<any> {
         let tokenHolder: String;
         let loginName: String;
-        let postHeaders: Headers
-        
+        let postHeaders: Headers;
+
          if ( this.localStorage.getItem("token")) {
             tokenHolder = this.localStorage.getItem("token");
             loginName = this.localStorage.getItem("login");
