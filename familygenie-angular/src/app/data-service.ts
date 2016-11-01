@@ -98,7 +98,6 @@ export class DataService {
     }
 
     getAllParentalRelTypes () {
-        console.log("in get all parental rel types");
         return this.apiService.get("/parentalreltypes")
             .do(function(res) {
                 this.parentalRelTypes = res;
@@ -115,7 +114,7 @@ export class DataService {
         );
     }
 
-    getPersonById(_id) {
+    getPersonById(_id: string) {
         return this.persons.find(function(person){
                             return person._id === _id;
                      });

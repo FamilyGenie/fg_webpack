@@ -50,8 +50,9 @@ export class MapComponent {
         const parentDistance = 190;
         const childDistance = 120;
 
-
+        debugger;
         this.route.params.subscribe(function(params) {
+            console.log("inside map.onInit with param: ", params._id);
             this.star_id = params._id;
         }.bind(this));
 
