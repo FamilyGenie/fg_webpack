@@ -28,11 +28,6 @@ export class LoginComponent {
 
     submitCredentials() {
         this.authService.login(this.username, this.password);
-        // this.router.navigate([
-        //     "peoplesearch"
-        // ]);
-        // this is a bad way to do this
-        // window.location.href = "http://localhost:3000/peoplesearch";
     };
 
 }

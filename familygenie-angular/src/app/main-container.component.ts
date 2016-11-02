@@ -16,4 +16,10 @@ export class MainContainer {
     logOut() {
         this.authService.logout();
     }
+
+    logIn() {
+                this.router.navigate([
+                    "login"
+                    ]);
+    }
 }

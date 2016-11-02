@@ -21,6 +21,9 @@
             <li *ngIf="this.authService.isLoggedIn()" class="navbar-li-padding" >
                 <a class="navbarright" (click)="logOut()">LOG OUT</a>
             </li>
+            <li *ngIf="!this.authService.isLoggedIn()" class="navbar-li-padding" >
+                <a class="navbarright" (click)="logIn()">LOG IN</a>
+            </li>
         </ul>
     </nav>
     <router-outlet></router-outlet>

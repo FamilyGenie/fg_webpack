@@ -18,10 +18,13 @@ export class AuthService {
         this.localStorage = localStorage;
     }
 
-  login(un: string, pw: string): void {
+  login(un: string, pw: string) {
     this.dataService.login(un, pw).subscribe(function(res){
+            // we only get in here if the login is successful
             this.localStorage.setItem("token", res.token);
+            this.localStorage.setItem("userName", res.userName);
             this.dataService.loadAllData();
+            alert("Successful login. Welcome " + localStorage.getItem("userName"));
             this.router.navigate([""]);
         }.bind(this));
   }
