@@ -34,6 +34,7 @@ export class AuthService {
     this.localStorage.clear();
     this.dataService.clearAllData();
     this.router.navigate([""]);
+    alert("Thank you for using Family Genie. You are now logged out.");
   }
 
   isLoggedIn (): boolean {

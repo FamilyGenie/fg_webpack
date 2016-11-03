@@ -50,7 +50,6 @@ export class MapComponent {
         const parentDistance = 190;
         const childDistance = 120;
 
-        debugger;
         this.route.params.subscribe(function(params) {
             console.log("inside map.onInit with param: ", params._id);
             this.star_id = params._id;
@@ -65,7 +64,7 @@ export class MapComponent {
         }
 
         // this is for troubleshooting map drawing
-        // this.drawTicks();
+        this.drawTicks();
 
         console.log("Drawing map for:", this.star_id, this.dateFilterString);
         this.initializeVariables();
@@ -703,9 +702,11 @@ export class MapComponent {
         lineStrArr.push(dad.mapYPos - 40);
         lineStrArr.push("C");
         lineStrArr.push((mom.mapXPos - dad.mapXPos) / 4 + dad.mapXPos);
-        lineStrArr.push((mom.mapYPos - 40) / 2 + ",");
+        lineStrArr.push((mom.mapYPos - 40) / (768 / dad.mapXPos) + ",");
+        // lineStrArr.push((mom.mapYPos - 40) / (dad.mapXPos / 200) + ",");
         lineStrArr.push((mom.mapXPos - dad.mapXPos) / 4 * 3 + dad.mapXPos);
-        lineStrArr.push((mom.mapYPos - 40) / 2 + ",");
+        lineStrArr.push((mom.mapYPos - 40) / (768 / dad.mapXPos) + ",");
+        // lineStrArr.push((mom.mapYPos - 40) / (dad.mapXPos / 200) + ",");
         lineStrArr.push(mom.mapXPos);
         lineStrArr.push(mom.mapYPos - 40);
 
@@ -1116,7 +1117,7 @@ export class MapComponent {
         let cx = (mom.mapXPos - dad.mapXPos) / 2 + dad.mapXPos;
 
         // yPos needs to account for the curve of the rel line
-        let cy = (mom.mapYPos - 40) / 2 + 20; // + .1 * (mom.mapYPos - dad.mapPos);
+        let cy = (mom.mapYPos - 40) / (768 / dad.mapXPos) + 10; // + .1 * (mom.mapYPos - dad.mapPos);
 
         let lineData = [
             {"x": cx - 7, "y": cy + 5}, {"x": cx + 7, "y": cy - 5},
