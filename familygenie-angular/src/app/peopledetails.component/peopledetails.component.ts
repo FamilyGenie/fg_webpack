@@ -18,6 +18,7 @@ export class PeopleDetailsComponent {
 
     star_id: string;
     newParentalRel_id: string;
+    starName: string;
 
     router: Router;
 
@@ -33,6 +34,7 @@ export class PeopleDetailsComponent {
         this.route.params.subscribe(function(params) {
             // console.log("In people details OnInit. Here are the params:", params._id);
             this.star_id = params._id;
+            this.starName = this.dataService.getPersonById(this.star_id).fName + " " + this.dataService.getPersonById(this.star_id).lName;
             // Couldn't get this code below to work. Leaving it in case I find someone who can help me with it
             // if (!this.dataService.getPersonById(params._id)) {
             //     alert("No person with that ID, you are being directed to the PeopleSearch page");

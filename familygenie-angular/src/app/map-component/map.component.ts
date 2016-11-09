@@ -303,7 +303,8 @@ export class MapComponent {
         } // end for parentObj
 
         if (!this.pairBonds.length) {
-            alert("There are no pair bonds among the parents of this star. Please fix and re-draw map. Fix by going to star detail page, see who their parents are, then look at the parent's detail page and make sure there is at least one pair bond among them.");
+            let star = this.dataService.getPersonById(this.star_id);
+            alert("There are no pair bonds among the parents of " + star.fName + " " + star.lName + ". Please fix and re-draw map. Fix by going to " + star.fName + " " + star.lName + "'s detail page, click on their parents to get to the parent's detail page, and make sure there is at least one pair bond among them.");
             return false;
         }
 
@@ -630,7 +631,7 @@ export class MapComponent {
                     }
                 } else {
                     // mom is not drawn, so tell the user there is something fishy, and continue
-                    alert("There may be a problem with the parental relationship between " + child.fName + " " + child.lName + " and " + mom.fName + " " + mom.lName + ". It is likely that the start date of the parental relationship is before the start date of a pair bond between the parent and another parent for the child. Perhaps you need to designate the start of an informal relationship?");
+                    alert("There may be a problem with the parental relationship between " + child.fName + " " + child.lName + " and " + mom.fName + " " + mom.lName + ". This might be caused by " + mom.fName + " " + mom.lName + " not being in a pair bond with another parent of " + child.fName + " " + child.lName + ". It may also be that the start date of the parental relationship is before the start date of a pair bond between the parent and another parent for the child. Perhaps there is an informal relationship between " + mom.fName + " " + mom.lName + " that did start before the parenal relationship with " + child.fName + " " + child.lName + ". If so, please create that informal relationship.");
                 }
             }
 
@@ -653,7 +654,7 @@ export class MapComponent {
                     }
                 } else {
                     // dad is not drawn, so tell the user there is something fishy, and continue
-                    alert("There may be a problem with the parental relationship between " + child.fName + " " + child.lName + " and " + dad.fName + " " + dad.lName + ". It is likely that the start date of the parental relationship is before the start date of a pair bond between the parent and another parent for the child. Perhaps you need to designate the start of an informal relationship?");
+                     alert("There may be a problem with the parental relationship between " + child.fName + " " + child.lName + " and " + dad.fName + " " + dad.lName + ". This might be caused by " + dad.fName + " " + dad.lName + " not being in a pair bond with another parent of " + child.fName + " " + child.lName + ". It may also be that the start date of the parental relationship is before the start date of a pair bond between the parent and another parent for the child. Perhaps there is an informal relationship between " + dad.fName + " " + dad.lName + " that did start before the parenal relationship with " + child.fName + " " + child.lName + ". If so, please create that informal relationship.");
                 }
             }
         }
