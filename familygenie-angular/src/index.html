@@ -8,6 +8,7 @@
 	
 	<!-- JQuery CDN -->
 	<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
 
 	<!-- Bootstrap JQuery -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
@@ -24,21 +25,25 @@
 	<!-- Point to d3.js -->
 	<script src="./assets/d3.min.js"></script>
 
-	<!-- Point to moment.js for date manipulation -->
-	<!-- <script src="node_modules/moment/moment.js"></script> -->
+	<!-- these are for the datepicker for Safari and FF -->
+	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 	
 	<link rel="stylesheet" href="assets/css/styles.css">
 
-	<!-- 
-	<script src="node_modules/core-js/client/shim.min.js"></script>
-	<script src="node_modules/zone.js/dist/zone.js"></script>
-	<script src="node_modules/reflect-metadata/Reflect.js"></script>
-	<script src="node_modules/systemjs/dist/system.src.js"></script>
-	<script src="systemjs.config.js"></script>
+	<!--
 	<script>
-	  System.import('app').catch(function(err){ console.error(err); });
+    	$("input[type=date]").each(function() {
+        	if  (this.type != 'date' ) {
+        		$(this).datepicker({
+                	dateFormat: 'yy-mm-dd'
+            	});
+        	}
+		});
 	</script>
 	-->
+
   </head>
   <!-- 3. Display the application -->
   <body>

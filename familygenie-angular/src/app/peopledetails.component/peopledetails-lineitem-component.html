@@ -46,6 +46,7 @@
                 data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1"
                 class="form-control"
                 type="date"
+                id=birth_date
                 [ngModel]="this.dataService.getFormattedDate(person.birthDate)"
                 (blur)="onUpdate($event, 'birthDate')"
             />
@@ -98,3 +99,11 @@
         </div>
     </div>
 </div>
+<!-- <script>
+    // jQuery(function($){ //on document.ready
+        debugger;
+            $('#birth_date').datepicker({
+                dateFormat: 'yy-mm-dd'
+            });
+    //     });
+</script> -->
