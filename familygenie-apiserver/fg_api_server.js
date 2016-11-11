@@ -50,6 +50,7 @@ require("./api_calls/get-api")(app, passport, PersonModel, PairBondRelModel, Par
 require("./api_calls/create-api")(app, passport, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
 require("./api_calls/update-api")(app, passport, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
 require("./api_calls/delete-api")(app, passport, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
+require("./gedcom/gedcom.js")(app, mongoose);
 
 /*app.get('*', function(req, res){
    res.sendFile('../familygenie-angular/index.html');

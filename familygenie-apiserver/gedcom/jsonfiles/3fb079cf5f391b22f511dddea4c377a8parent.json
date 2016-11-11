@@ -1,0 +1,4034 @@
+[ 
+{
+"child_id" : "@P2@",
+"parent_id" : "@P5@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "2000-01-25 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P2@",
+"parent_id" : "@P1@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "2000-01-25 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P1@",
+"parent_id" : "@P4@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1967-04-27 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P1@",
+"parent_id" : "@P3@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1967-04-27 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P3@",
+"parent_id" : "@P13@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1937-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P3@",
+"parent_id" : "@P12@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1937-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P4@",
+"parent_id" : "@P11@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1930-08-24 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P4@",
+"parent_id" : "@P10@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1930-08-24 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P5@",
+"parent_id" : "@P6@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1961-01-13 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P5@",
+"parent_id" : "@P7@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1961-01-13 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P6@",
+"parent_id" : "@P52@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1934-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P6@",
+"parent_id" : "@P51@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1934-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P7@",
+"parent_id" : "@P16@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1935-11-10 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P7@",
+"parent_id" : "@P15@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1935-11-10 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P8@",
+"parent_id" : "@P4@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1965-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P8@",
+"parent_id" : "@P3@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1965-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P9@",
+"parent_id" : "@P4@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P9@",
+"parent_id" : "@P3@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P10@",
+"parent_id" : "@P87@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1904-08-12 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P10@",
+"parent_id" : "@P86@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1904-08-12 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P11@",
+"parent_id" : "@P85@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1893-05-15 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P11@",
+"parent_id" : "@P84@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1893-05-15 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P12@",
+"parent_id" : "@P224@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P12@",
+"parent_id" : "@P223@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P13@",
+"parent_id" : "@P89@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1909-02-12 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P13@",
+"parent_id" : "@P88@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1909-02-12 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P14@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1967-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P14@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1967-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P15@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P15@",
+"parent_id" : "@P29@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P16@",
+"parent_id" : "@P24@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1904-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P16@",
+"parent_id" : "@P25@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1904-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P17@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1933-09-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P17@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1933-09-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P18@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P18@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P19@",
+"parent_id" : "@P17@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1965-08-27 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P19@",
+"parent_id" : "@P7@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1965-08-27 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P20@",
+"parent_id" : "@P17@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P20@",
+"parent_id" : "@P7@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P21@",
+"parent_id" : "@P17@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1963-12-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P21@",
+"parent_id" : "@P7@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1963-12-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P22@",
+"parent_id" : "@P17@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P22@",
+"parent_id" : "@P7@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P23@",
+"parent_id" : "@P16@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P23@",
+"parent_id" : "@P15@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P24@",
+"parent_id" : "@P36@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1868-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P24@",
+"parent_id" : "@P34@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1868-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P25@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1879-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P25@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1879-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P26@",
+"parent_id" : "@P16@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1929-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P26@",
+"parent_id" : "@P15@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1929-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P27@",
+"parent_id" : "@P16@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1929-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P27@",
+"parent_id" : "@P15@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1929-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P28@",
+"parent_id" : "@P16@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1929-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P28@",
+"parent_id" : "@P15@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1929-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P29@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1882-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P29@",
+"parent_id" : "@P50@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1882-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P30@",
+"parent_id" : "@P45@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1880-06-06 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P30@",
+"parent_id" : "@P44@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1880-06-06 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P31@",
+"parent_id" : "@P24@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1916-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P31@",
+"parent_id" : "@P25@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1916-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P32@",
+"parent_id" : "@P24@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1890-08-13 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P32@",
+"parent_id" : "@P25@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1890-08-13 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P33@",
+"parent_id" : "@P24@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1892-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P33@",
+"parent_id" : "@P25@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1892-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P34@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1843-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P34@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1843-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P35@",
+"parent_id" : "@P24@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1893-01-29 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P35@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1893-01-29 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P36@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1843-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P36@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1843-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P37@",
+"parent_id" : "@P24@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1899-01-09 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P37@",
+"parent_id" : "@P25@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1899-01-09 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P38@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1907-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P38@",
+"parent_id" : "@P29@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1907-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P39@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1915-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P39@",
+"parent_id" : "@P29@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1915-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P40@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1914-07-26 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P40@",
+"parent_id" : "@P29@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1914-07-26 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P41@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1910-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P41@",
+"parent_id" : "@P29@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1910-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P42@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1913-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P42@",
+"parent_id" : "@P29@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1913-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P43@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1902-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P43@",
+"parent_id" : "@P29@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1902-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P44@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P44@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P45@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P45@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P46@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1903-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P46@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1903-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P47@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1922-01-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P47@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1922-01-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P48@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1916-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P48@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1916-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P49@",
+"parent_id" : "@P30@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1929-10-25 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P49@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1929-10-25 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P50@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P50@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P51@",
+"parent_id" : "@P54@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1910-03-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P51@",
+"parent_id" : "@P53@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1910-03-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P52@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1908-12-21 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P52@",
+"parent_id" : "@P58@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1908-12-21 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P53@",
+"parent_id" : "@P67@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P53@",
+"parent_id" : "@P66@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P54@",
+"parent_id" : "@P63@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P54@",
+"parent_id" : "@P62@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P55@",
+"parent_id" : "@P52@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1933-09-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P55@",
+"parent_id" : "@P51@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1933-09-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P56@",
+"parent_id" : "@P52@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1933-09-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P56@",
+"parent_id" : "@P51@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1933-09-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P57@",
+"parent_id" : "@P52@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1937-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P57@",
+"parent_id" : "@P51@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1937-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P58@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1877-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P58@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1877-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P59@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1866-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P59@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1866-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P60@",
+"parent_id" : "@P54@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1916-02-24 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P60@",
+"parent_id" : "@P53@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1916-02-24 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P61@",
+"parent_id" : "@P54@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1912-09-05 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P61@",
+"parent_id" : "@P53@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1912-09-05 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P62@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1862-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P62@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1862-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P63@",
+"parent_id" : "@P120@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P63@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P64@",
+"parent_id" : "@P54@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1917-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P64@",
+"parent_id" : "@P53@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1917-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P65@",
+"parent_id" : "@P54@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1913-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P65@",
+"parent_id" : "@P53@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1913-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P66@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1865-12-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P66@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1865-12-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P67@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1865-05-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P67@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1865-05-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P68@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1915-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P68@",
+"parent_id" : "@P58@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1915-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P69@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1902-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P69@",
+"parent_id" : "@P58@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1902-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P70@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1891-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P70@",
+"parent_id" : "@P58@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1891-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P71@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1896-08-10 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P71@",
+"parent_id" : "@P58@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1896-08-10 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P72@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1904-09-15 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P72@",
+"parent_id" : "@P58@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1904-09-15 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P73@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1902-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P73@",
+"parent_id" : "@P58@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1902-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P74@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1907-04-03 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P74@",
+"parent_id" : "@P58@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1907-04-03 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P75@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1893-01-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P75@",
+"parent_id" : "@P58@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1893-01-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P76@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1900-03-25 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P76@",
+"parent_id" : "@P58@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1900-03-25 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P77@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1915-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P77@",
+"parent_id" : "@P81@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1915-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P78@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1910-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P78@",
+"parent_id" : "@P81@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1910-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P79@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1903-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P79@",
+"parent_id" : "@P81@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1903-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P80@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1898-04-08 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P80@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1898-04-08 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P81@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1877-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P81@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1877-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P82@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P82@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P83@",
+"parent_id" : "@P59@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1910-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P83@",
+"parent_id" : "@P82@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1910-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P84@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1853-12-29 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P84@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1853-12-29 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P85@",
+"parent_id" : "@P217@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1851-07-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P85@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1851-07-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P86@",
+"parent_id" : "@P116@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P86@",
+"parent_id" : "@P115@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P87@",
+"parent_id" : "@P112@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P87@",
+"parent_id" : "@P111@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P88@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1887-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P88@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1887-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P89@",
+"parent_id" : "@P103@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1885-04-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P89@",
+"parent_id" : "@P102@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1885-04-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P90@",
+"parent_id" : "@P13@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1937-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P90@",
+"parent_id" : "@P92@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1937-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P91@",
+"parent_id" : "@P13@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1934-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P91@",
+"parent_id" : "@P92@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1934-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P92@",
+"parent_id" : "@P106@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1912-02-24 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P92@",
+"parent_id" : "@P105@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1912-02-24 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P93@",
+"parent_id" : "@P95@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1891-08-09 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P93@",
+"parent_id" : "@P94@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1891-08-09 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P94@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1870-07-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P94@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1870-07-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P95@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1852-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P95@",
+"parent_id" : "@P159@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1852-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P96@",
+"parent_id" : "@P93@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1919-01-24 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P96@",
+"parent_id" : "@P99@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1919-01-24 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P97@",
+"parent_id" : "@P93@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1917-02-12 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P97@",
+"parent_id" : "@P99@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1917-02-12 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P98@",
+"parent_id" : "@P93@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1913-12-17 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P98@",
+"parent_id" : "@P99@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1913-12-17 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P99@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1896-03-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P99@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1896-03-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P100@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1913-04-08 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P100@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1913-04-08 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P101@",
+"parent_id" : "@P100@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1940-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P101@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1940-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P102@",
+"parent_id" : "@P154@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1855-05-17 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P102@",
+"parent_id" : "@P153@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1855-05-17 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P103@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1848-09-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P103@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1848-09-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P104@",
+"parent_id" : "@P89@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1906-08-21 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P104@",
+"parent_id" : "@P88@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1906-08-21 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P105@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1891-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P105@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1891-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P106@",
+"parent_id" : "@P219@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1886-11-18 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P106@",
+"parent_id" : "@P218@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1886-11-18 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P107@",
+"parent_id" : "@P87@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1902-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P107@",
+"parent_id" : "@P86@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1902-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P108@",
+"parent_id" : "@P87@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1927-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P108@",
+"parent_id" : "@P86@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1927-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P109@",
+"parent_id" : "@P87@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1913-04-21 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P109@",
+"parent_id" : "@P86@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1913-04-21 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P110@",
+"parent_id" : "@P87@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1903-05-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P110@",
+"parent_id" : "@P86@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1903-05-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P111@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1849-09-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P111@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1849-09-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P112@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1847-04-07 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P112@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1847-04-07 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P113@",
+"parent_id" : "@P87@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1922-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P113@",
+"parent_id" : "@P86@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1922-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P114@",
+"parent_id" : "@P87@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1917-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P114@",
+"parent_id" : "@P86@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1917-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P115@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1841-03-20 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P115@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1841-03-20 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P116@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1834-09-09 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P116@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1834-09-09 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P117@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1865-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P117@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1865-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P118@",
+"parent_id" : "@P63@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1896-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P118@",
+"parent_id" : "@P62@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1896-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P119@",
+"parent_id" : "@P63@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1887-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P119@",
+"parent_id" : "@P62@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1887-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P120@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P120@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P121@",
+"parent_id" : "@P63@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1891-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P121@",
+"parent_id" : "@P62@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1891-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P122@",
+"parent_id" : "@P63@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1893-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P122@",
+"parent_id" : "@P62@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1893-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P123@",
+"parent_id" : "@P63@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1889-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P123@",
+"parent_id" : "@P62@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1889-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P124@",
+"parent_id" : "@P67@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1885-04-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P124@",
+"parent_id" : "@P66@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1885-04-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P125@",
+"parent_id" : "@P67@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1899-12-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P125@",
+"parent_id" : "@P66@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1899-12-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P126@",
+"parent_id" : "@P67@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1897-10-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P126@",
+"parent_id" : "@P66@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1897-10-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P127@",
+"parent_id" : "@P67@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1894-05-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P127@",
+"parent_id" : "@P66@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1894-05-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P128@",
+"parent_id" : "@P67@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1890-05-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P128@",
+"parent_id" : "@P66@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1890-05-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P129@",
+"parent_id" : "@P67@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1892-10-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P129@",
+"parent_id" : "@P66@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1892-10-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P130@",
+"parent_id" : "@P67@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1888-12-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P130@",
+"parent_id" : "@P66@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1888-12-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P131@",
+"parent_id" : "@P45@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1869-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P131@",
+"parent_id" : "@P44@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1869-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P132@",
+"parent_id" : "@P45@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1888-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P132@",
+"parent_id" : "@P44@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1888-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P133@",
+"parent_id" : "@P45@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1869-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P133@",
+"parent_id" : "@P44@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1869-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P134@",
+"parent_id" : "@P45@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1882-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P134@",
+"parent_id" : "@P44@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1882-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P135@",
+"parent_id" : "@P112@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1885-10-12 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P135@",
+"parent_id" : "@P111@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1885-10-12 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P136@",
+"parent_id" : "@P112@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1874-04-25 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P136@",
+"parent_id" : "@P111@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1874-04-25 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P137@",
+"parent_id" : "@P112@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1878-07-23 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P137@",
+"parent_id" : "@P111@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1878-07-23 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P138@",
+"parent_id" : "@P112@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1872-07-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P138@",
+"parent_id" : "@P111@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1872-07-04 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P139@",
+"parent_id" : "@P112@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1883-10-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P139@",
+"parent_id" : "@P111@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1883-10-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P140@",
+"parent_id" : "@P116@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1866-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P140@",
+"parent_id" : "@P115@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1866-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P141@",
+"parent_id" : "@P116@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1871-07-06 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P141@",
+"parent_id" : "@P115@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1871-07-06 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P142@",
+"parent_id" : "@P116@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1873-09-06 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P142@",
+"parent_id" : "@P115@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1873-09-06 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P143@",
+"parent_id" : "@P116@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1867-09-06 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P143@",
+"parent_id" : "@P115@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1867-09-06 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P144@",
+"parent_id" : "@P116@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1879-12-18 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P144@",
+"parent_id" : "@P115@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1879-12-18 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P145@",
+"parent_id" : "@P116@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1878-07-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P145@",
+"parent_id" : "@P115@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1878-07-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P146@",
+"parent_id" : "@P116@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1866-05-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P146@",
+"parent_id" : "@P115@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1866-05-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P147@",
+"parent_id" : "@P116@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1863-05-18 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P147@",
+"parent_id" : "@P115@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1863-05-18 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P148@",
+"parent_id" : "@P103@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1890-02-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P148@",
+"parent_id" : "@P102@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1890-02-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P149@",
+"parent_id" : "@P103@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1873-11-11 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P149@",
+"parent_id" : "@P102@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1873-11-11 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P150@",
+"parent_id" : "@P103@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1878-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P150@",
+"parent_id" : "@P102@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1878-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P151@",
+"parent_id" : "@P103@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1888-07-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P151@",
+"parent_id" : "@P102@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1888-07-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P152@",
+"parent_id" : "@P103@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1882-05-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P152@",
+"parent_id" : "@P102@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1882-05-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P153@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1832-03-15 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P153@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1832-03-15 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P154@",
+"parent_id" : "@P158@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1814-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P154@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1814-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P155@",
+"parent_id" : "@P154@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1857-06-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P155@",
+"parent_id" : "@P153@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1857-06-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P156@",
+"parent_id" : "@P154@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1857-06-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P156@",
+"parent_id" : "@P153@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1857-06-16 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P157@",
+"parent_id" : "@P154@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1866-01-18 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P157@",
+"parent_id" : "@P153@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1866-01-18 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P158@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P158@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P159@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1829-11-25 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P159@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1829-11-25 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P160@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1806-03-05 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P160@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1806-03-05 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P161@",
+"parent_id" : "@P95@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1896-02-10 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P161@",
+"parent_id" : "@P94@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1896-02-10 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P162@",
+"parent_id" : "@P95@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1898-12-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P162@",
+"parent_id" : "@P94@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1898-12-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P163@",
+"parent_id" : "@P95@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1891-06-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P163@",
+"parent_id" : "@P94@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1891-06-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P164@",
+"parent_id" : "@P95@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1894-12-15 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P164@",
+"parent_id" : "@P94@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1894-12-15 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P165@",
+"parent_id" : "@P95@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1890-04-09 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P165@",
+"parent_id" : "@P94@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1890-04-09 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P166@",
+"parent_id" : "@P95@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1888-06-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P166@",
+"parent_id" : "@P94@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1888-06-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P167@",
+"parent_id" : "@P95@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1886-05-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P167@",
+"parent_id" : "@P94@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1886-05-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P168@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1770-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P168@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1770-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P169@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1766-01-27 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P169@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1766-01-27 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P170@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1843-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P170@",
+"parent_id" : "@P159@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1843-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P171@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1847-11-02 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P171@",
+"parent_id" : "@P159@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1847-11-02 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P172@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1859-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P172@",
+"parent_id" : "@P159@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1859-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P173@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1860-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P173@",
+"parent_id" : "@P159@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1860-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P174@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1835-06-23 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P174@",
+"parent_id" : "@P159@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1835-06-23 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P175@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1832-11-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P175@",
+"parent_id" : "@P159@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1832-11-01 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P176@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1846-07-20 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P176@",
+"parent_id" : "@P159@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1846-07-20 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P177@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1855-01-13 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P177@",
+"parent_id" : "@P159@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1855-01-13 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P178@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1835-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P178@",
+"parent_id" : "@P184@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1835-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P179@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1848-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P179@",
+"parent_id" : "@P184@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1848-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P180@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1843-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P180@",
+"parent_id" : "@P184@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1843-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P181@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1829-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P181@",
+"parent_id" : "@P184@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1829-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P182@",
+"parent_id" : "@P160@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1857-01-05 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P182@",
+"parent_id" : "@P159@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1857-01-05 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P183@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1828-10-03 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P183@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1828-10-03 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P184@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1810-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P184@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1810-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P185@",
+"parent_id" : "@P212@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1746-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P185@",
+"parent_id" : "@P211@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1746-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P186@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1717-09-17 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P186@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1717-09-17 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P187@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1817-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P187@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1817-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P188@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1810-08-14 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P188@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1810-08-14 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P189@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1801-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P189@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1801-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P190@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1814-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P190@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1814-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P191@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1810-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P191@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1810-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P192@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1816-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P192@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1816-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P193@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1820-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P193@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1820-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P194@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1798-03-31 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P194@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1798-03-31 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P195@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1803-06-23 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P195@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1803-06-23 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P196@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1810-08-14 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P196@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1810-08-14 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P197@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1796-06-14 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P197@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1796-06-14 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P198@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1792-12-29 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P198@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1792-12-29 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P199@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1770-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P199@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1770-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P200@",
+"parent_id" : "@P169@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1802-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P200@",
+"parent_id" : "@P168@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1802-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P201@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1769-08-24 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P201@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1769-08-24 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P202@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1767-10-12 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P202@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1767-10-12 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P203@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1777-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P203@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1777-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P204@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1772-07-05 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P204@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1772-07-05 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P205@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1770-01-19 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P205@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1770-01-19 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P206@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1785-06-23 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P206@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1785-06-23 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P207@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1790-04-14 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P207@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1790-04-14 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P208@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1781-05-08 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P208@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1781-05-08 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P209@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1779-12-06 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P209@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1779-12-06 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P210@",
+"parent_id" : "@P186@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1773-04-10 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P210@",
+"parent_id" : "@P185@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1773-04-10 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P211@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1718-03-11 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P211@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1718-03-11 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P212@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1691-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P212@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1691-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P213@",
+"parent_id" : "@P212@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1695-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P213@",
+"parent_id" : "@P211@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1695-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P214@",
+"parent_id" : "@P212@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1723-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P214@",
+"parent_id" : "@P211@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1723-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P215@",
+"parent_id" : "@P212@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1726-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P215@",
+"parent_id" : "@P211@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1726-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P216@",
+"parent_id" : "@P212@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1730-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P216@",
+"parent_id" : "@P211@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1730-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P217@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P217@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : null,
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P218@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1860-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P218@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1860-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P219@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1860-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P219@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1860-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P220@",
+"parent_id" : "@P219@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1890-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P220@",
+"parent_id" : "@P218@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1890-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P221@",
+"parent_id" : "@P219@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1892-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P221@",
+"parent_id" : "@P218@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1892-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P222@",
+"parent_id" : "@P219@",
+"relationshipType" : "Father",
+"subType" : "Biological",
+"startDate" : "1886-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P222@",
+"parent_id" : "@P218@",
+"relationshipType" : "Mother",
+"subType" : "Biological",
+"startDate" : "1886-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P223@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1891-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P223@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1891-01-01 00:00:00",
+"approxDate" : true,
+"endDate" : null
+},
+{
+"child_id" : "@P224@",
+"parent_id" : null,
+"relationshipType" : "Father",
+"subType" : null,
+"startDate" : "1886-11-18 00:00:00",
+"approxDate" : false,
+"endDate" : null
+},
+{
+"child_id" : "@P224@",
+"parent_id" : null,
+"relationshipType" : "Mother",
+"subType" : null,
+"startDate" : "1886-11-18 00:00:00",
+"approxDate" : false,
+"endDate" : null
+}
+]

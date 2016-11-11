@@ -1,0 +1,443 @@
+[ 
+{ 
+"personOne_id" : "@P5@",
+"personTwo_id" : "@P1@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P4@",
+"personTwo_id" : "@P3@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P8@",
+"personTwo_id" : "@P14@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P16@",
+"personTwo_id" : "@P15@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P24@",
+"personTwo_id" : "@P25@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P30@",
+"personTwo_id" : "@P29@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P17@",
+"personTwo_id" : "@P7@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P18@",
+"personTwo_id" : "@P7@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P6@",
+"personTwo_id" : "@P7@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P52@",
+"personTwo_id" : "@P51@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P54@",
+"personTwo_id" : "@P53@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P59@",
+"personTwo_id" : "@P81@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P59@",
+"personTwo_id" : "@P82@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P59@",
+"personTwo_id" : "@P58@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P11@",
+"personTwo_id" : "@P10@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P13@",
+"personTwo_id" : "@P12@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P13@",
+"personTwo_id" : "@P92@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P93@",
+"personTwo_id" : "@P99@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P89@",
+"personTwo_id" : "@P88@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P87@",
+"personTwo_id" : "@P86@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P63@",
+"personTwo_id" : "@P117@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P63@",
+"personTwo_id" : "@P62@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P67@",
+"personTwo_id" : "@P66@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P36@",
+"personTwo_id" : "@P34@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P45@",
+"personTwo_id" : "@P44@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P112@",
+"personTwo_id" : "@P111@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P116@",
+"personTwo_id" : "@P115@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P103@",
+"personTwo_id" : "@P102@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P154@",
+"personTwo_id" : "@P153@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P95@",
+"personTwo_id" : "@P94@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P160@",
+"personTwo_id" : "@P183@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P160@",
+"personTwo_id" : "@P184@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P160@",
+"personTwo_id" : "@P159@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P169@",
+"personTwo_id" : "@P199@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P169@",
+"personTwo_id" : "@P168@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P186@",
+"personTwo_id" : "@P185@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P212@",
+"personTwo_id" : "@P211@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P85@",
+"personTwo_id" : "@P84@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P106@",
+"personTwo_id" : "@P105@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P219@",
+"personTwo_id" : "@P218@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P224@",
+"personTwo_id" : "@P223@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : null,
+"personTwo_id" : "@P50@",
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P24@",
+"personTwo_id" : null,
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P30@",
+"personTwo_id" : null,
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P120@",
+"personTwo_id" : null,
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P59@",
+"personTwo_id" : null,
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P217@",
+"personTwo_id" : null,
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P100@",
+"personTwo_id" : null,
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+},
+{ 
+"personOne_id" : "@P158@",
+"personTwo_id" : null,
+"relationshipType" : "Marriage",
+"startDate" : null,
+"approxDate" : false,
+"subType" : null,
+"endDate" : null
+}
+]

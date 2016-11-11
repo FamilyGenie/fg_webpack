@@ -17,7 +17,7 @@ export class ApiService {
     localStorage: CoolLocalStorage;
 
     // this is the URL of our server, will need to update if the server changes
-    url: string = "http://familygenie.me:3500";
+    url: string = "http://localhost:3500";
 
     constructor(
         private http: Http,
