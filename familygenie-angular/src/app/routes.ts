@@ -9,6 +9,7 @@ import { PeopleSearchComponent } from "./peoplesearch.component/peoplesearch.com
 import { PeopleDetailsComponent } from "./peopledetails.component/peopledetails.component";
 import { LoginComponent } from "./login-component/login.component";
 import { AuthGuard } from "./auth-service/auth-guard.service";
+import { UploadComponent } from "./upload-component/upload.component";
 
 // export const routes: RouterConfig = [
 const appRoutes: Routes = [
@@ -50,6 +51,11 @@ const appRoutes: Routes = [
     {
         path: "login",
         component: LoginComponent
+        // , canActivate: [AuthService] // this line will be needed when auth is enabled
+    },
+    {
+        path: "upload",
+        component: UploadComponent
         // , canActivate: [AuthService] // this line will be needed when auth is enabled
     }
 ];

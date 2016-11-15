@@ -25,6 +25,7 @@ import { ApiService } from "./api.service";
 import { LoginComponent } from "./login-component/login.component";
 import { AuthGuard } from "./auth-service/auth-guard.service";
 import { AuthService } from "./auth-service/auth.service";
+import { UploadComponent } from "./upload-component/upload.component";
 
 @NgModule({
     imports:      [
@@ -45,6 +46,7 @@ import { AuthService } from "./auth-service/auth.service";
         ParentalRelationshipComponent,
         PairBondRelationshipComponent,
         PersonChangeComponent,
+        UploadComponent,
         LoginComponent,
         MainContainer
     ],
