@@ -22,7 +22,6 @@ import sys, os
 # for use with node
 argIn = sys.argv[1]
 argOut = sys.argv[2]
-userId = sys.argv[3]
 
 # file to log errors that may need attention
 logfile = open("log/indi.log", "a")
@@ -386,8 +385,7 @@ def makeJSONobject(filename):
         json += birthPlace[i] + ',\n'
         json += deathDate [i] + ',\n'
         json += deathPlace[i] + ',\n'
-        json += personId[i] + ',\n'
-        json += '"user_id" : "' + userId + '"\n'
+        json += personId[i] + '\n'
         if i == (length - 1):
             json += '}\n'
         else:

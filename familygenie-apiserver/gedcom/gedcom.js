@@ -17,11 +17,12 @@ module.exports = function(app, mongoose, bodyParser, passport) {
 
   // I couldn't figure out how to change the filename that is sent over, and saw that the action from the client side was sending the name "filename", so using that name here.
   app.post("/uploads", auth.isAuthenticated, multer({dest: "./gedcom/uploads/"}).single("gedcom"), function(req, res) {
-    console.log("inside getcom parse and import");
+    var user_id = req.decoded._doc.userName;
+    console.log("inside getcom parse and import for user: ", user_id);
     res.send(req.files);
 
     // parse and import people
-    exec('python ./gedcom/gedcomparse.py ./gedcom/uploads/' + req.file.filename + ' ./gedcom/jsonfiles/' + req.file.filename + 'indi.json',  // run the python program on the info
+    exec('python ./gedcom/gedcomparse.py ./gedcom/uploads/' + req.file.filename + ' ./gedcom/jsonfiles/' + req.file.filename + 'indi.json ' + user_id,  // run the python program on the info
     function(err) {
       if(err) {
         console.log('python parse failed', err);
@@ -41,7 +42,7 @@ module.exports = function(app, mongoose, bodyParser, passport) {
     });
 
     // parse and import parents
-    exec('python ./gedcom/gedcomparent.py ./gedcom/uploads/' + req.file.filename + ' ./gedcom/jsonfiles/' + req.file.filename + 'parent.json',  // run the python program on the info
+    exec('python ./gedcom/gedcomparent.py ./gedcom/uploads/' + req.file.filename + ' ./gedcom/jsonfiles/' + req.file.filename + 'parent.json ' + user_id,  // run the python program on the info
       function(err) {
       if(err) {
         console.log('python parse failed', err);
@@ -60,7 +61,7 @@ module.exports = function(app, mongoose, bodyParser, passport) {
     });
 
     // parse and import pair bonds
-    exec('python ./gedcom/gedcompairbonds.py ./gedcom/uploads/' + req.file.filename + ' ./gedcom/jsonfiles/' + req.file.filename + 'pairbond.json',  // run the python program on the info
+    exec('python ./gedcom/gedcompairbonds.py ./gedcom/uploads/' + req.file.filename + ' ./gedcom/jsonfiles/' + req.file.filename + 'pairbond.json ' + user_id,  // run the python program on the info
       function(err) {
       if(err) {
         console.log('python parse failed', err);
