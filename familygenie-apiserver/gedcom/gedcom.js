@@ -1,55 +1,45 @@
-// var mongoose = require('mongoose');
+var auth = require('../authentication');
 var multer = require('multer');
-var bodyParser = require('body-parser');
 var exec = require('child_process').exec;
 
-module.exports = function(app, mongoose) {
+module.exports = function(app, mongoose, bodyParser, passport) {
 
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: true }));
+  // I thought these lines were needed. But it now appears to be working without them. Leaving them commented out for now.
+  // app.use(bodyParser.json());
+  // app.use(bodyParser.urlencoded({ extended: true }));
 
-  app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
-
-  // upload things
-  // var upload = multer({ dest: './gedcom/uploads/' });
-  // var type = upload.single('sampleFile'); // sampleFile must match name of input on frontend
+  // these lines not needed, as the domain of this server is the same as the domain running the Angular code. Keeping these here just in case.
+  // app.use(function(req, res, next) {
+  //   res.header("Access-Control-Allow-Origin", "*");
+  //   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  //   next();
+  // });
 
   // I couldn't figure out how to change the filename that is sent over, and saw that the action from the client side was sending the name "filename", so using that name here.
-  app.post("/uploads", multer({dest: "./gedcom/uploads/"}).single("gedcom"), function(req, res) {
-    console.log("inside multer");
+  app.post("/uploads", auth.isAuthenticated, multer({dest: "./gedcom/uploads/"}).single("gedcom"), function(req, res) {
+    console.log("inside getcom parse and import");
     res.send(req.files);
-  });
 
-  // mongo connection
-  // mongoose.connect('mongodb://localhost');
-  // var db = mongoose.connection;
-  // var people = require('./people.model')(mongoose); // change this to your people model
+    // parse and import people
+    exec('python ./gedcom/gedcomparse.py ./gedcom/uploads/' + req.file.filename + ' ./gedcom/jsonfiles/' + req.file.filename + 'indi.json',  // run the python program on the info
+    function(err) {
+      if(err) {
+        console.log('python parse failed', err);
+      }
+    else {
+      console.log('gedcom saved and parsed to json with python');
+      // this call imports the file that was just uploaded into mongoDB
+      exec('mongoimport --db test --collection gedcom_indi --type json --file ./gedcom/jsonfiles/' + req.file.filename + 'indi.json --jsonArray', function(err) { 
+        if(err) {
+          console.log('mongo import failed', err);
+        }
+        else {
+          console.log('json file imported to mongo');
+        }
+      });
+    }
+    });
 
-  // get the info from the upload button
-  // app.post('/uploads', type, function(req, res, next) {
-  //   console.log("in the multer uploads");
-  //   // parse and import people
-  //   exec('python ./gedcom/gedcomparse.py ./gedcom/uploads/' + req.file.filename + ' ./gedcom/jsonfiles/' + req.file.filename + 'indi.json',  // run the python program on the info
-  //     function(err) {
-  //     if(err) {
-  //       console.log('python parse failed', err);
-  //     }
-  //     else {
-  //       console.log('gedcom saved and parsed to json with python');
-  //       exec('mongoimport --db test --collection gedcom_indi --type json --file ./gedcom/jsonfiles/' + req.file.filename + 'indi.json --jsonArray', function(err) { // imports the file that was just uploaded into mongoDB
-  //         if(err) {
-  //           console.log('mongo import failed', err);
-  //         }
-  //         else {
-  //           console.log('json file imported to mongo');
-  //         }
-  //       });
-  //     }
-  //   });
   //   // parse and import parents
   //   exec('python ./gedcom/gedcomparent.py ./gedcom/uploads/' + req.file.filename + ' ./gedcom/jsonfiles/' + req.file.filename + 'parent.json',  // run the python program on the info
   //     function(err) {
@@ -90,6 +80,10 @@ module.exports = function(app, mongoose) {
 
   //   res.redirect('/uploaddirect');
   // });
+
+  });
+
+
 
   // app.use(function(req, res, next) {
   //     console.log(req.url);

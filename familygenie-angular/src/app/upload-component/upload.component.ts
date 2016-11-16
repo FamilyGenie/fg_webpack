@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "../auth-service/auth.service";
+import { ApiService } from "../api.service";
 
 @Component({
     selector: "upload",
@@ -10,13 +11,16 @@ export class UploadComponent {
 
     filesToUpload: Array<File>;
     // fileDisplayName: string;
-    fileDisplayName = "Hi";
+    fileDisplayName: string;
 
-    constructor() {
+    constructor(
+            private apiService: ApiService
+    ) {
         this.filesToUpload = [];
-        this.fileDisplayName = "Hello";
+        this.fileDisplayName = "No file selected";
     }
 
+    // Most of this code came from one website, that I now cannot find (man, that is frustrating).
     upload() {
         this.makeFileRequest("http://localhost:3500/uploads", [], this.filesToUpload).then((result) => {
             console.log(result);
@@ -46,14 +50,16 @@ export class UploadComponent {
                     if (xhr.status === 200) {
                         // this line below was causing an unexpected end of JSON error, and I didn't see what it was doing, so commenting it out. Though I need to figure out what kind of repercussions this will have.
                         // resolve(JSON.parse(xhr.response));
+                        alert("File Upload Successful");
                     } else {
-                        console.log("not an xhr status 200");
+                        alert("File Upload was not successful. Please try again or contact support.");
                         reject(xhr.response);
                     }
                 }
             };
-            xhr.open("POST", url, true);
-            xhr.send(formData);
+
+            this.apiService.xhr_post(xhr, url, formData);
+
         });
     }
 }

@@ -98,4 +98,23 @@ export class ApiService {
         .catch(err => Observable.throw(err))
         .map(this.getJSON);
     }
+
+    // this is specifically for the gedcom file upload process
+    xhr_post(xhrToSend, url, formData) {
+        let tokenHolder: string;
+        let loginName: string;
+
+         if ( this.localStorage.getItem("token")) {
+            tokenHolder = this.localStorage.getItem("token");
+            loginName = this.localStorage.getItem("login");
+        } else {
+            tokenHolder = "";
+            loginName = "";
+        }
+
+        xhrToSend.open("POST", url, true);
+        xhrToSend.setRequestHeader("x-access-token", tokenHolder);
+        xhrToSend.setRequestHeader("loginName", loginName);
+        xhrToSend.send(formData);
+    }
 }

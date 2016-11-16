@@ -16,47 +16,47 @@ const appRoutes: Routes = [
     {
         path: "",
         component: AppComponent
-        // , canActivate: [AuthService] // this line will be needed when auth is enabled
+        // , canActivate: [AuthGuard] // this line will be needed if we want to protect this page
     },
     {
         path: "about",
         component: AboutComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "map",
         component: MapComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "map/:_id",
         component: MapComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "peoplesearch",
         component: PeopleSearchComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "peopledetails",
         component: PeopleDetailsComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "peopledetails/:_id",
         component: PeopleDetailsComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "login",
         component: LoginComponent
-        // , canActivate: [AuthService] // this line will be needed when auth is enabled
+        // , canActivate: [AuthGuard] // this line will be needed if we want to protect this page
     },
     {
         path: "upload",
-        component: UploadComponent
-        // , canActivate: [AuthService] // this line will be needed when auth is enabled
+        component: UploadComponent,
+        canActivate: [AuthGuard]
     }
 ];
 
