@@ -3,3 +3,5 @@ dist
 typings
 data
 .DS_Store
+uploads
+jsonfiles
