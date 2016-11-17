@@ -1,8 +1,7 @@
-var passport = require('passport');
 var auth = require('../authentication');
 var mongoose = require('mongoose');
 
-module.exports = function(app, passport, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel) {
+module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel) {
 	app.post('/update', auth.isAuthenticated, function(req, res){
 		// console.log("in update with:", req.body, req.header);
 		// console.log("req.body.object._id",req.body.object._id);
