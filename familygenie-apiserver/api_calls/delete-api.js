@@ -1,8 +1,7 @@
-var passport = require('passport');
 var auth = require('../authentication');
 var mongoose = require('mongoose');
 
-module.exports = function(app, passport, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel) {
+module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel) {
 	app.post('/delete', auth.isAuthenticated, function(req, res) {
 		var user = req.decoded._doc.userName;
 

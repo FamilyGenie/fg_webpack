@@ -19,6 +19,7 @@ app.get('/map/:uid', function(req, res){
         path = req.params[0] ? req.params[0] : 'index.html';
     res.sendFile(path, {root: './public'});
 });
+app.use('/upload', express.static('public'));
 
 app.use(function(req, res, next) {
 	res.status(404);

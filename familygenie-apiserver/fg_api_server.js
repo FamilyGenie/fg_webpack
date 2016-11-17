@@ -9,7 +9,8 @@ var jwt    = require('jsonwebtoken');
 var initPassport = require('./passport/init');
 var config = require('./config');
 var flash = require('connect-flash');
-var auth = require('./authentication');
+// This not needed here, it is required in the individual files that need it
+// var auth = require('./authentication');
 var session = require('express-session');
 // var cookieParser = require('cookie-parser');
 var user;
@@ -44,12 +45,13 @@ app.use(function(req, res, next) {
 	next();
 });
 
-require("./user.server.route")(app,passport);
+require("./passport/passport.routes")(app,passport);
 
-require("./api_calls/get-api")(app, passport, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
-require("./api_calls/create-api")(app, passport, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
-require("./api_calls/update-api")(app, passport, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
-require("./api_calls/delete-api")(app, passport, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
+require("./api_calls/get-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
+require("./api_calls/create-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
+require("./api_calls/update-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
+require("./api_calls/delete-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
+require("./gedcom/gedcom.js")(app, mongoose, bodyParser, passport);
 
 /*app.get('*', function(req, res){
    res.sendFile('../familygenie-angular/index.html');

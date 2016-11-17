@@ -1,0 +1,19 @@
+<!-- <h1>Upload Gedcom File</h1>
+<input class="btn" type="file" (change)="fileChangeEvent($event)" placeholder="Upload file..." />
+<br>
+<button type="button" class="btn btn-primary" (click)="upload()">Upload</button>
+<br>
+<br> -->
+
+<h1>Upload Gedcom File</h1>
+<br>
+<div class="input-group">
+  <label class="input-group-btn">
+    <span class="btn btn-primary">
+      Browse&hellip; <input type="file" style="display: none;" (change)="fileChangeEvent($event)">
+    </span>
+  </label>
+  <input type="text" class="form-control" readonly [ngModel]="fileDisplayName">
+</div>
+<br>
+<button type="button" class="btn btn-primary" (click)="upload()">Upload</button>

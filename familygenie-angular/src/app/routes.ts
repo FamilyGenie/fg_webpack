@@ -9,48 +9,54 @@ import { PeopleSearchComponent } from "./peoplesearch.component/peoplesearch.com
 import { PeopleDetailsComponent } from "./peopledetails.component/peopledetails.component";
 import { LoginComponent } from "./login-component/login.component";
 import { AuthGuard } from "./auth-service/auth-guard.service";
+import { UploadComponent } from "./upload-component/upload.component";
 
 // export const routes: RouterConfig = [
 const appRoutes: Routes = [
     {
         path: "",
         component: AppComponent
-        // , canActivate: [AuthService] // this line will be needed when auth is enabled
+        // , canActivate: [AuthGuard] // this line will be needed if we want to protect this page
     },
     {
         path: "about",
         component: AboutComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "map",
         component: MapComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "map/:_id",
         component: MapComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "peoplesearch",
         component: PeopleSearchComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "peopledetails",
         component: PeopleDetailsComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "peopledetails/:_id",
         component: PeopleDetailsComponent,
-        canActivate: [AuthGuard] // this line will be needed when auth is enabled
+        canActivate: [AuthGuard]
     },
     {
         path: "login",
         component: LoginComponent
-        // , canActivate: [AuthService] // this line will be needed when auth is enabled
+        // , canActivate: [AuthGuard] // this line will be needed if we want to protect this page
+    },
+    {
+        path: "upload",
+        component: UploadComponent,
+        canActivate: [AuthGuard]
     }
 ];
 

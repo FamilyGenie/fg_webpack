@@ -1,9 +1,7 @@
-var passport = require('passport');
 var auth = require('../authentication');
 var mongoose = require('mongoose');
 
-module.exports = function(app, passport, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel) {
-
+module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel) {
 	app.get('/people', auth.isAuthenticated, function(req, res) {
 		console.log("in get people:", req.decoded._doc.userName);
 		var user = req.decoded._doc.userName;
