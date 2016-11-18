@@ -29,6 +29,7 @@ export class MapComponent {
     // this stores how far below the parents the first child is drawn. This number gets bigger if there is an adoptive parent pair on the map.
     firstChildYDistance: number;
     firstChildYWithAdoptions: number;
+    textLineSpacing: number = 14;
 
     fullName: string;
     router: Router;
@@ -47,8 +48,9 @@ export class MapComponent {
 
         const startX = 700;
         const startY = 200;
-        const parentDistance = 190;
+        const parentDistance = 210;
         const childDistance = 120;
+        // const textLineSpacing = 14;
 
         this.route.params.subscribe(function(params) {
             console.log("inside map.onInit with param: ", params._id);
@@ -395,7 +397,7 @@ export class MapComponent {
                     this.drawCircleHash(dad);
                 }
                 dad.d3Symbol = this.drawMaleSymbol(nextMaleX, YPos);
-                dad.d3Text = this.drawCircleText(nextMaleX - 125, YPos - 20, dad);
+                dad.d3Text = this.drawCircleText(nextMaleX - 160, YPos - 25, dad);
                 nextMaleX -= parentDistance;
                 this.alreadyDrawn.push(dad);
             } else if ( !dad ) {
@@ -413,7 +415,7 @@ export class MapComponent {
                     this.drawCircleHash(mom);
                 }
                 mom.d3Symbol = this.drawFemaleSymbol(nextFemaleX, YPos);
-                mom.d3Text = this.drawCircleText(nextFemaleX + 45, YPos - 20, mom);
+                mom.d3Text = this.drawCircleText(nextFemaleX + 45, YPos - 25, mom);
                 nextFemaleX += parentDistance;
                 this.alreadyDrawn.push(mom);
             } else if ( !mom ) {
@@ -584,7 +586,7 @@ export class MapComponent {
                     child.d3Star = this.drawStar(xPos, nextChildY, child);
                 }
                 child.d3TextBox = this.drawTextBox(xPos, nextChildY);
-                child.d3Text = this.drawCircleText(xPos + 50, nextChildY - 20, child);
+                child.d3Text = this.drawCircleText(xPos + 50, nextChildY - 25, child);
 
                 nextChildY += childDistance;
 
@@ -883,19 +885,19 @@ export class MapComponent {
                 // name
                 {"x": cx, "y": cy, "txt": person.fName + " " + person.lName},
                 // birth info
-                {"x": cx, "y": cy + 12, "txt": "DOB: " + this.dataService.getFormattedDate(person.birthDate)},
-                {"x": cx, "y": cy + 24, "txt": person.birthPlace},
+                {"x": cx, "y": cy + this.textLineSpacing, "txt": "DOB: " + this.dataService.getFormattedDate(person.birthDate)},
+                {"x": cx, "y": cy + (this.textLineSpacing * 2), "txt": person.birthPlace},
                 // death info
-                {"x": cx, "y": cy + 36, "txt": "DOD: " + this.dataService.getFormattedDate(person.deathDate)},
-                {"x": cx, "y": cy + 48, "txt": person.deathPlace}
+                {"x": cx, "y": cy + (this.textLineSpacing * 3), "txt": "DOD: " + this.dataService.getFormattedDate(person.deathDate)},
+                {"x": cx, "y": cy + (this.textLineSpacing * 4), "txt": person.deathPlace}
             ];
         } else {
             textData = [
                 // name
                 {"x": cx, "y": cy, "txt": person.fName + " " + person.lName},
                 // birth info
-                {"x": cx, "y": cy + 12, "txt": "DOB: " + this.dataService.getFormattedDate(person.birthDate)},
-                {"x": cx, "y": cy + 24, "txt": person.birthPlace}
+                {"x": cx, "y": cy + this.textLineSpacing, "txt": "DOB: " + this.dataService.getFormattedDate(person.birthDate)},
+                {"x": cx, "y": cy + (this.textLineSpacing * 2), "txt": person.birthPlace}
             ];
         }
 
@@ -910,7 +912,7 @@ export class MapComponent {
             .attr("y", function(d) { return d.y; })
             .text(function(d)     { return d.txt; })
             .attr("font-family", "sans-serif")
-            .attr("font-size", ".75em")
+            .attr("font-size", "1em")
             .attr("fill", "black");
     }
 
@@ -942,7 +944,7 @@ export class MapComponent {
             cx += 1;
             coord = this.drawnCoords.find(
                 function(coord) {
-                    return Math.abs(cx - coord.x) < 90 && Math.abs(cy - coord.y) < 25;
+                    return Math.abs(cx - coord.x) < 100 && Math.abs(cy - coord.y) < 25;
                 }
             );
         }
@@ -962,7 +964,7 @@ export class MapComponent {
                 // apart info
                 {
                     "x": cx + 3,
-                    "y": cy + 12,
+                    "y": cy + this.textLineSpacing,
                     "txt": this.getRelTextEndPrefix(pairBondRel.relationshipType) +
                     this.dataService.getFormattedDate(pairBondRel.endDate)
                 },
@@ -972,7 +974,7 @@ export class MapComponent {
                 // together info
                 {
                     "x": cx,
-                    "y": cy + 12,
+                    "y": cy + this.textLineSpacing,
                     "txt": this.getRelTextPrefix(pairBondRel.relationshipType) +
                     this.dataService.getFormattedDate(pairBondRel.startDate)}
             ];
@@ -997,7 +999,7 @@ export class MapComponent {
             .attr("y", function(d) { return d.y; })
             .text(function(d)     { return d.txt; })
             .attr("font-family", "sans-serif")
-            .attr("font-size", ".75em")
+            .attr("font-size", "1em")
             .attr("fill", pairBondRel.color);
     }
 
