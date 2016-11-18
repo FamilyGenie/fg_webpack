@@ -29,7 +29,9 @@ export class MapComponent {
     // this stores how far below the parents the first child is drawn. This number gets bigger if there is an adoptive parent pair on the map.
     firstChildYDistance: number;
     firstChildYWithAdoptions: number;
+    // this is a constant value for all text spacing written on the map
     textLineSpacing: number = 14;
+    textSize: string = "1em";
 
     fullName: string;
     router: Router;
@@ -50,7 +52,6 @@ export class MapComponent {
         const startY = 200;
         const parentDistance = 210;
         const childDistance = 120;
-        // const textLineSpacing = 14;
 
         this.route.params.subscribe(function(params) {
             console.log("inside map.onInit with param: ", params._id);
@@ -912,7 +913,7 @@ export class MapComponent {
             .attr("y", function(d) { return d.y; })
             .text(function(d)     { return d.txt; })
             .attr("font-family", "sans-serif")
-            .attr("font-size", "1em")
+            .attr("font-size", this.textSize)
             .attr("fill", "black");
     }
 
@@ -974,7 +975,7 @@ export class MapComponent {
                 // together info
                 {
                     "x": cx,
-                    "y": cy + this.textLineSpacing,
+                    "y": cy,
                     "txt": this.getRelTextPrefix(pairBondRel.relationshipType) +
                     this.dataService.getFormattedDate(pairBondRel.startDate)}
             ];
@@ -999,7 +1000,7 @@ export class MapComponent {
             .attr("y", function(d) { return d.y; })
             .text(function(d)     { return d.txt; })
             .attr("font-family", "sans-serif")
-            .attr("font-size", "1em")
+            .attr("font-size", this.textSize)
             .attr("fill", pairBondRel.color);
     }
 
