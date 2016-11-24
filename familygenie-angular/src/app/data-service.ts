@@ -63,8 +63,29 @@ export class DataService {
      }
 
     getFormattedDate(inDate) {
+        // console.log("In dataservice.getFormattedDate: ", inDate);
         if (inDate) {
             return inDate.substr(0, 10);
+        } else {
+            return "";
+        }
+    }
+
+    getFormattedDateMMDDYYYY(inDate) {
+        // Get date that was in YYYY-MM-DD format and return in mm/dd/yyyy
+        console.log("dataService.getformattedDateMMDDYYYY with input: ", inDate);
+        if (inDate) {
+            console.log("Dataservice.getformatteddatemmddyyyy output: ", inDate.substr(5, 2) + "/" + inDate.substr(8, 2) + "/" + inDate.substr(0, 4));
+            return inDate.substr(5, 2) + "/" + inDate.substr(8, 2) + "/" + inDate.substr(0, 4);
+        } else {
+            return "";
+        }
+    }
+
+    dateConvertMMDDYYYYtoYYYYMMDD(inDate) {
+        // inDate has format mm/dd/yyyy, convert to yyyy-mm-dd
+        if (inDate) {
+            return inDate.substr(6, 4) + "-" + inDate.substr(0, 2) + "-" + inDate.substr(3, 2);
         } else {
             return "";
         }

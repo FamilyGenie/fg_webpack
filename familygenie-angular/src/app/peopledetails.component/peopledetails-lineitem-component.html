@@ -42,14 +42,21 @@
             </select>
         </div>
         <div class="col-xs-2 custom-input">
-            <input
+                <my-date-picker [options]="myDatePickerOptions"
+                        [selDate]="this.dataService.getFormattedDateMMDDYYYY(person.birthDate)"
+                        id=birth_date
+                        (dateChanged)="onUpdate($event, 'birthDate')"
+                        (blur)="onDateLeave($event)"
+                >
+                </my-date-picker>
+            <!-- <input
                 data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1"
                 class="form-control"
                 type="date"
                 id=birth_date
                 [ngModel]="this.dataService.getFormattedDate(person.birthDate)"
                 (blur)="onUpdate($event, 'birthDate')"
-            />
+            /> -->
         </div>
         <div class="col-xs-2 custom-input">
             <input
@@ -99,11 +106,3 @@
         </div>
     </div>
 </div>
-<!-- <script>
-    // jQuery(function($){ //on document.ready
-        debugger;
-            $('#birth_date').datepicker({
-                dateFormat: 'yy-mm-dd'
-            });
-    //     });
-</script> -->

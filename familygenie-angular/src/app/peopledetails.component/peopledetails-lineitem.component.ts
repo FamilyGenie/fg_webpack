@@ -2,6 +2,8 @@ import { Component, Input, Output, EventEmitter, Directive, ElementRef } from "@
 import { DataService } from "../data-service";
 // import { FORM_DIRECTIVES } from "@angular/common";
 import { Router, ActivatedRoute } from "@angular/router";
+// import { AirDatepicker } from "angular2-air-datepicker";
+import { MyDatePickerModule } from "mydatepicker";
 
 // this Directive code and the export class that follows is to set the focus to the first name field when the page is loaded
 // @Directive({
@@ -29,6 +31,12 @@ export class PeopleDetailsLineItemComponent {
     @Output() onUpdatePerson = new EventEmitter();
 
     router: Router;
+    myDatePickerOptions: any = {
+        dateFormat: "mm/dd/yyyy",
+        firstDayOfWeek: "su",
+        sunHighlight: false,
+        showDateFormatPlaceholder: true
+    };
 
     constructor ( private dataService: DataService, _router: Router) {
         this.router = _router;
@@ -46,8 +54,16 @@ export class PeopleDetailsLineItemComponent {
             ]);
     }
 
+    onDateChange(evt) {
+        console.log("in onDateChange: ", evt.valid);
+    }
+
+    onDateLeave(evt) {
+        console.log("in onDateLeave: ", evt);
+    }
+
     onUpdate(evt, field) {
-        console.log("in people details lineitem update", field, evt);
+        // console.log("in people details lineitem update", field, evt);
         switch (field) {
             case "fName":
                 this.person.fName = evt.target.value;
@@ -59,7 +75,8 @@ export class PeopleDetailsLineItemComponent {
                 this.person.lName = evt.target.value;
                 break;
             case "birthDate":
-                this.person.birthDate = evt.target.value;
+                console.log("birthdate update with: ", evt.formatted);
+                this.person.birthDate = this.dataService.dateConvertMMDDYYYYtoYYYYMMDD(evt.formatted);
                 break;
             case "birthPlace":
                 this.person.birthPlace = evt.target.value;
@@ -79,7 +96,7 @@ export class PeopleDetailsLineItemComponent {
                 console.log("in default of update people details line item switch statement");
                 break;
         }
-        console.log(this.person);
+        console.log("Update Person: ", this.person);
         this.onUpdatePerson.emit(this.person);
 
     }
