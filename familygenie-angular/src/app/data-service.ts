@@ -359,4 +359,14 @@ export class DataService {
             }
         }
     }
+
+    // global settings that are called by every component that uses a date picker in the app so that they all behave the same.
+    setMyDatePickerOptions(): any {
+        return({
+            dateFormat: "mm/dd/yyyy",
+            firstDayOfWeek: "su",
+            sunHighlight: false,
+            showDateFormatPlaceholder: true
+        });
+    }
 }

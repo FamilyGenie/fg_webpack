@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { DataService } from "../data-service";
 import { Router, ActivatedRoute } from "@angular/router";
+import { MyDatePickerModule } from "mydatepicker";
 
 @Component({
     selector: "personchange",
@@ -12,13 +13,19 @@ import { Router, ActivatedRoute } from "@angular/router";
     template: `
         <div class="row pairbond-item">
             <div *ngIf="this.personChange" class="col-xs-2 custom-input">
-                <input
+                <my-date-picker 
+                    [options]="myDatePickerOptions"
+                    [selDate]="this.dataService.getFormattedDateMMDDYYYY(personChange.dateChange)"
+                    (dateChanged)="onUpdate($event, 'dateChange')"
+                >
+                </my-date-picker>
+                <!-- <input
                     data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1"
                     class="form-control"
                     type="date"
                     [ngModel]="this.dataService.getFormattedDate(personChange.dateChange)"
                     (blur)="onUpdate($event, 'dateChange')"
-                />
+                /> -->
             </div>
             <div *ngIf="this.personChange" class="col-xs-2 custom-input">
                 <input
@@ -63,6 +70,9 @@ export class PersonChangeComponent {
     @Input() personChange;
     @Output() onUpdatePersonChange = new EventEmitter();
     router: Router;
+    // set the myDatePickerOptions so it shows correctly. Use a global service from dataService so that all datepickers across the app work the same way
+    myDatePickerOptions: any = this.dataService.setMyDatePickerOptions();
+
     // this ir to store what person we are showing the changes for
     star_id: string;
 
@@ -81,10 +91,10 @@ export class PersonChangeComponent {
     }
 
     onUpdate(evt, field) {
-        console.log("in personChange.onUpdate", field, evt.target.value);
         switch (field) {
             case "dateChange":
-                this.personChange.dateChange = evt.target.value;
+                // this.personChange.dateChange = evt.target.value;
+                this.personChange.dateChange = this.dataService.dateConvertMMDDYYYYtoYYYYMMDD(evt.formatted);
                 break;
             case "fName":
                 this.personChange.fName = evt.target.value;

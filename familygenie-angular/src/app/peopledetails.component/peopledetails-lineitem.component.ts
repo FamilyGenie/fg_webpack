@@ -7,9 +7,7 @@ import { MyDatePickerModule } from "mydatepicker";
 // @Directive({
 //     selector: "[focusDirective]"
 // })
-// @Directive({
-//     selector: "my-date-picker"
-// })
+
 export class FocusDirective {
     constructor(private el: ElementRef) {}
     ngOnInit() {
@@ -32,12 +30,8 @@ export class PeopleDetailsLineItemComponent {
     @Output() onUpdatePerson = new EventEmitter();
 
     router: Router;
-    myDatePickerOptions: any = {
-        dateFormat: "mm/dd/yyyy",
-        firstDayOfWeek: "su",
-        sunHighlight: false,
-        showDateFormatPlaceholder: true
-    };
+    // set the myDatePickerOptions so it shows correctly. Use a global service from dataService so that all datepickers across the app work the same way
+    myDatePickerOptions: any = this.dataService.setMyDatePickerOptions();
 
     constructor ( private dataService: DataService, _router: Router) {
         this.router = _router;
