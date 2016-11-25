@@ -27,11 +27,12 @@ export class MapComponent {
     alreadyDrawn = [];
     drawnCoords = [];
     // this stores how far below the parents the first child is drawn. This number gets bigger if there is an adoptive parent pair on the map.
+    // there are some constants at the top it he ngOnInit function call
     firstChildYDistance: number;
     firstChildYWithAdoptions: number;
     // this is a constant value for all text spacing written on the map
-    textLineSpacing: number = 14;
-    textSize: string = "1em";
+    textLineSpacing: number = 18;
+    textSize: string = ".9em";
 
     fullName: string;
     router: Router;
@@ -48,9 +49,11 @@ export class MapComponent {
 
     ngOnInit() {
 
-        const startX = 700;
+        // there are some constants at the top of the component class definition as well.
+        // these constants determine where to start drawing the map
+        const startX = 775;
         const startY = 200;
-        const parentDistance = 210;
+        const parentDistance = 220;
         const childDistance = 120;
 
         this.route.params.subscribe(function(params) {
@@ -398,7 +401,7 @@ export class MapComponent {
                     this.drawCircleHash(dad);
                 }
                 dad.d3Symbol = this.drawMaleSymbol(nextMaleX, YPos);
-                dad.d3Text = this.drawCircleText(nextMaleX - 160, YPos - 25, dad);
+                dad.d3Text = this.drawCircleText(nextMaleX - 170, YPos - 25, dad);
                 nextMaleX -= parentDistance;
                 this.alreadyDrawn.push(dad);
             } else if ( !dad ) {
@@ -1121,8 +1124,8 @@ export class MapComponent {
         let cx = (mom.mapXPos - dad.mapXPos) / 2 + dad.mapXPos;
 
         // yPos needs to account for the curve of the rel line
-        let cy = (mom.mapYPos - 40) / (768 / dad.mapXPos) + 10; // + .1 * (mom.mapYPos - dad.mapPos);
-
+        // let cy = (mom.mapYPos - 40) / (768 / dad.mapXPos) + 10; // + .1 * (mom.mapYPos - dad.mapPos);
+        let cy = (mom.mapYPos - 40) / (700 / (dad.mapXPos ^ (.5))) + 10;
         let lineData = [
             {"x": cx - 7, "y": cy + 5}, {"x": cx + 7, "y": cy - 5},
         ];

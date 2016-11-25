@@ -70,15 +70,12 @@ export class PeopleDetailsLineItemComponent {
                 this.person.lName = evt.target.value;
                 break;
             case "birthDate":
-                console.log("birthdate update with: ", evt.formatted);
                 this.person.birthDate = this.dataService.dateConvertMMDDYYYYtoYYYYMMDD(evt.formatted);
                 break;
             case "birthPlace":
                 this.person.birthPlace = evt.target.value;
                 break;
             case "deathDate":
-                // this.person.deathDate = evt.target.value;
-                console.log("deathDate update with: ", evt.formatted);
                 this.person.deathDate = this.dataService.dateConvertMMDDYYYYtoYYYYMMDD(evt.formatted);
                 break;
             case "deathPlace":

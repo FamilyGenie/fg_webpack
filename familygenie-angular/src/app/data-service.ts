@@ -46,51 +46,6 @@ export class DataService {
         this.personChanges = [];
     }
 
-    dateCalculator (inDate: string, arg: string, value: number): string {
-        let date = new Date(inDate);
-            switch (arg) {
-                 case "addYear":
-                     date.setFullYear(date.getFullYear() + value);
-                     break;
-                 case "subYear":
-                     date.setFullYear(date.getFullYear() - value);
-                     break;
-                 default:
-                     console.log("Invalid arguments in call to dateCalculator");
-                     break;
-             }
-         return date.toISOString().substr(0, 10);
-     }
-
-    getFormattedDate(inDate) {
-        // console.log("In dataservice.getFormattedDate with input: ", inDate);
-        if (inDate) {
-            return inDate.substr(0, 10);
-        } else {
-            return "";
-        }
-    }
-
-    getFormattedDateMMDDYYYY(inDate) {
-        // Get date that was in YYYY-MM-DD format and return in mm/dd/yyyy
-        // console.log("dataService.getformattedDateMMDDYYYY with input: ", inDate);
-        if (inDate) {
-            // console.log("Dataservice.getformatteddatemmddyyyy output: ", inDate.substr(5, 2) + "/" + inDate.substr(8, 2) + "/" + inDate.substr(0, 4));
-            return inDate.substr(5, 2) + "/" + inDate.substr(8, 2) + "/" + inDate.substr(0, 4);
-        } else {
-            return "";
-        }
-    }
-
-    dateConvertMMDDYYYYtoYYYYMMDD(inDate) {
-        // inDate has format mm/dd/yyyy, convert to yyyy-mm-dd
-        if (inDate) {
-            return inDate.substr(6, 4) + "-" + inDate.substr(0, 2) + "-" + inDate.substr(3, 2);
-        } else {
-            return "";
-        }
-    }
-
     getAllPeople() {
         // console.log("in get all people");
         return this.apiService.get("/people")
@@ -368,5 +323,51 @@ export class DataService {
             sunHighlight: false,
             showDateFormatPlaceholder: true
         });
+    }
+
+    dateCalculator (inDate: string, arg: string, value: number): string {
+    let date = new Date(inDate);
+        switch (arg) {
+             case "addYear":
+                 date.setFullYear(date.getFullYear() + value);
+                 break;
+             case "subYear":
+                 date.setFullYear(date.getFullYear() - value);
+                 break;
+             default:
+                 console.log("Invalid arguments in call to dateCalculator");
+                 break;
+         }
+     return date.toISOString().substr(0, 10);
+     }
+
+    getFormattedDate(inDate) {
+        // console.log("In dataservice.getFormattedDate with input: ", inDate);
+        if (inDate) {
+            return inDate.substr(0, 10);
+        } else {
+            return "";
+        }
+    }
+
+    getFormattedDateMMDDYYYY(inDate) {
+        // Get date that was in YYYY-MM-DD format and return in mm/dd/yyyy
+        // If the inDate has a falsy value, then return "", so that it is displayed correctly
+        if (inDate) {
+            // console.log("Dataservice.getformatteddatemmddyyyy output: ", inDate.substr(5, 2) + "/" + inDate.substr(8, 2) + "/" + inDate.substr(0, 4));
+            return inDate.substr(5, 2) + "/" + inDate.substr(8, 2) + "/" + inDate.substr(0, 4);
+        } else {
+            return "";
+        }
+    }
+
+    dateConvertMMDDYYYYtoYYYYMMDD(inDate) {
+        // inDate has format mm/dd/yyyy, convert to yyyy-mm-dd. 
+        // If the inDate has a falsy value, then return null, so that it is stored in the database correctly
+        if (inDate) {
+            return inDate.substr(6, 4) + "-" + inDate.substr(0, 2) + "-" + inDate.substr(3, 2);
+        } else {
+            return null;
+        }
     }
 }
