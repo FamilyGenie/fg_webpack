@@ -1,13 +1,14 @@
 import { Component, Input, Output, EventEmitter, Directive, ElementRef } from "@angular/core";
 import { DataService } from "../data-service";
-// import { FORM_DIRECTIVES } from "@angular/common";
 import { Router, ActivatedRoute } from "@angular/router";
-// import { AirDatepicker } from "angular2-air-datepicker";
 import { MyDatePickerModule } from "mydatepicker";
 
 // this Directive code and the export class that follows is to set the focus to the first name field when the page is loaded
 // @Directive({
 //     selector: "[focusDirective]"
+// })
+// @Directive({
+//     selector: "my-date-picker"
 // })
 export class FocusDirective {
     constructor(private el: ElementRef) {}
@@ -82,7 +83,9 @@ export class PeopleDetailsLineItemComponent {
                 this.person.birthPlace = evt.target.value;
                 break;
             case "deathDate":
-                this.person.deathDate = evt.target.value;
+                // this.person.deathDate = evt.target.value;
+                console.log("deathDate update with: ", evt.formatted);
+                this.person.deathDate = this.dataService.dateConvertMMDDYYYYtoYYYYMMDD(evt.formatted);
                 break;
             case "deathPlace":
                 this.person.deathPlace = evt.target.value;

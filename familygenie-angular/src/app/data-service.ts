@@ -63,7 +63,7 @@ export class DataService {
      }
 
     getFormattedDate(inDate) {
-        // console.log("In dataservice.getFormattedDate: ", inDate);
+        // console.log("In dataservice.getFormattedDate with input: ", inDate);
         if (inDate) {
             return inDate.substr(0, 10);
         } else {
@@ -73,9 +73,9 @@ export class DataService {
 
     getFormattedDateMMDDYYYY(inDate) {
         // Get date that was in YYYY-MM-DD format and return in mm/dd/yyyy
-        console.log("dataService.getformattedDateMMDDYYYY with input: ", inDate);
+        // console.log("dataService.getformattedDateMMDDYYYY with input: ", inDate);
         if (inDate) {
-            console.log("Dataservice.getformatteddatemmddyyyy output: ", inDate.substr(5, 2) + "/" + inDate.substr(8, 2) + "/" + inDate.substr(0, 4));
+            // console.log("Dataservice.getformatteddatemmddyyyy output: ", inDate.substr(5, 2) + "/" + inDate.substr(8, 2) + "/" + inDate.substr(0, 4));
             return inDate.substr(5, 2) + "/" + inDate.substr(8, 2) + "/" + inDate.substr(0, 4);
         } else {
             return "";

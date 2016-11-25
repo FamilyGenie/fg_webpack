@@ -1,3 +1,7 @@
+my-date-picker {
+  font-weight: 100;
+}
+
 /* Master Styles */
 .arrow-icons {
   font-size: 2.5em;
@@ -117,9 +121,10 @@ div.container.select-container {
   margin-top: 20px
 }
 
-/* this makes the fields square corners */
+/* this makes the fields square corners and increases font-size */
 .form-control {
   border-radius: 0;
+  font-size: 18px;
 }
 
 /* this makes the button square corners */
@@ -179,14 +184,6 @@ input .content {
 	background-color: #FAFFF1;
 }
 
-/*
-.addbutton {    
-  vertical-align: middle;
-  display: block;
-  margin: 0 auto;
-}
-*/
-
 .custom-input {
   padding-left: 5 !important;
   padding-right: 5 !important;
@@ -241,6 +238,7 @@ body {
   margin: 2em;
   padding-top: 60px;
   padding-bottom: 30px;
+  font-size: 18px;
 }
 
 .footer {
