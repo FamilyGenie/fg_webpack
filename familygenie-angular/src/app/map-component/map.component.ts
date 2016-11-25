@@ -731,13 +731,6 @@ export class MapComponent {
         }
 
         return line;
-
-        // return d3.select("svg")
-        // .append("path")
-        // .attr("d", lineStrArr.join(" "))
-        // .attr("fill", "transparent")
-        // .attr("stroke", color)
-        // .attr("stroke-width", 2);
     }
 
     drawAdoptiveRelLine(mom, dad, color, relType) {
@@ -934,13 +927,14 @@ export class MapComponent {
             cy = (mom.mapYPos) - 30;
         } else {
             // yPos needs to account for the curve of the rel line
-            cy = (mom.mapYPos - 40) / 2 - 5; //
+            // cy = (mom.mapYPos - 40) / 2 - 5;
+            cy = (mom.mapYPos - 160);
         }
 
         // check to see if there is already a text box drawn near here
         let coord = this.drawnCoords.find(
                 function(coord) {
-                    return Math.abs(cx - coord.x) < 90 && Math.abs(cy - coord.y) < 25;
+                    return Math.abs(cx - coord.x) < 120 && Math.abs(cy - coord.y) < 25;
                 }
             );
         // until there is not a text box here, continue to push the text box until there is room for it
@@ -948,7 +942,7 @@ export class MapComponent {
             cx += 1;
             coord = this.drawnCoords.find(
                 function(coord) {
-                    return Math.abs(cx - coord.x) < 100 && Math.abs(cy - coord.y) < 25;
+                    return Math.abs(cx - coord.x) < 120 && Math.abs(cy - coord.y) < 25;
                 }
             );
         }
@@ -1124,8 +1118,11 @@ export class MapComponent {
         let cx = (mom.mapXPos - dad.mapXPos) / 2 + dad.mapXPos;
 
         // yPos needs to account for the curve of the rel line
-        // let cy = (mom.mapYPos - 40) / (768 / dad.mapXPos) + 10; // + .1 * (mom.mapYPos - dad.mapPos);
-        let cy = (mom.mapYPos - 40) / (700 / (dad.mapXPos ^ (.5))) + 10;
+        // controlPoint is the controlPoint of the Bezier line that is drawn between the male and female of the relationship. I use it to calculate the y coordinate to draw the relationship hash. It was very experimental to figure out the equation that works
+        const controlPoint = (mom.mapYPos - 40) / (768 / dad.mapXPos);
+        // dad.mapYPos - 40 is the Y position of where the relationship line begins and ends. 
+        // What I do is take the control point and then push the hash mark down a little. Push it down by taking the amount of space between the control point and the beginning of the line and then take a fraction of that.
+        let cy = controlPoint + ( (dad.mapYPos - 40) - controlPoint ) / 4;
         let lineData = [
             {"x": cx - 7, "y": cy + 5}, {"x": cx + 7, "y": cy - 5},
         ];
