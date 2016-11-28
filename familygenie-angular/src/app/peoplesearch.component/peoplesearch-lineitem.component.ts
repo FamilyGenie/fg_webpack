@@ -44,9 +44,9 @@ import { Router } from "@angular/router";
                 <div class="col-xs-2 custom-input">
                     <input
                         class="form-control"
-                        type="date"
+                        type="text"
                         readonly
-                        [ngModel]="this.dataService.getFormattedDate(person.birthDate)"
+                        [ngModel]="this.dataService.getFormattedDateMMDDYYYY(person.birthDate)"
                     />
                 </div>
                 <div class="col-xs-2 custom-input">

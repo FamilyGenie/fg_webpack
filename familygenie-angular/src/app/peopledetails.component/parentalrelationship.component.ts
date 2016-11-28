@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { DataService } from "../data-service";
 // import { FORM_DIRECTIVES } from "@angular/common";
 import { Router } from "@angular/router";
+import { MyDatePickerModule } from "mydatepicker";
 
 declare let $;
 
@@ -68,22 +69,34 @@ declare let $;
                 </select>
             </div>
             <div *ngIf="this.personFullName" class="col-xs-2 custom-input">
-                <input 
+                <my-date-picker 
+                    [options]="myDatePickerOptions"
+                    [selDate]="this.dataService.getFormattedDateMMDDYYYY(parentalRel.startDate)"
+                    (dateChanged)="onUpdate($event, 'startDate')"
+                >
+                </my-date-picker>
+                <!-- <input 
                     data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1"
                     class="form-control"
                     type="date"
                     [ngModel]="this.dataService.getFormattedDate(parentalRel.startDate)"
                     (blur)="onUpdate($event, 'startDate')"
-                />
+                /> -->
             </div>
             <div *ngIf="this.personFullName" class="col-xs-2 custom-input">
-                <input
+                <my-date-picker 
+                    [options]="myDatePickerOptions"
+                    [selDate]="this.dataService.getFormattedDateMMDDYYYY(parentalRel.endDate)"
+                    (dateChanged)="onUpdate($event, 'endDate')"
+                >
+                </my-date-picker>
+                <!-- <input
                     data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1"
                     class="form-control"
                     type="date"
                     [ngModel]="this.dataService.getFormattedDate(parentalRel.endDate)"
                     (blur)="onUpdate($event, 'endDate')"
-                />
+                /> -->
             </div>
             <div class="col-xs-2 custom-input">
                 <button class="btn btn-primary btn-round" 
@@ -97,6 +110,8 @@ export class ParentalRelationshipComponent {
     @Input() parentalRel;
     @Output() onUpdateParentalRel = new EventEmitter();
     router: Router;
+    // set the myDatePickerOptions so it shows correctly. Use a global service from dataService so that all datepickers across the app work the same way
+    myDatePickerOptions: any = this.dataService.setMyDatePickerOptions();
 
     personFullName: string;
     parentRelTypes = [ "Father", "Mother"];
@@ -131,9 +146,6 @@ export class ParentalRelationshipComponent {
                 }
             }
         }
-
-        // console.log("in oninit of parentalrelationship with FullName:", this.personFullName);
-        // console.log("in ngoninit of parentalrelcomponent with paretalRelTypes:", this.dataService.parentalRelTypes);
     }
 
     openNewDetail () {
@@ -196,10 +208,12 @@ export class ParentalRelationshipComponent {
                 }
                 break;
             case "startDate":
-                this.parentalRel.startDate = evt.target.value;
+                // this.parentalRel.startDate = evt.target.value;
+                this.parentalRel.startDate = this.dataService.dateConvertMMDDYYYYtoYYYYMMDD(evt.formatted);
                 break;
             case "endDate":
-                this.parentalRel.endDate = evt.target.value;
+                // this.parentalRel.endDate = evt.target.value;
+                this.parentalRel.endDate = this.dataService.dateConvertMMDDYYYYtoYYYYMMDD(evt.formatted);
                 break;
             default:
                 console.log("in default of update parentalRel switch statement");

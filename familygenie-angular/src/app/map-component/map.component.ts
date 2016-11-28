@@ -27,8 +27,12 @@ export class MapComponent {
     alreadyDrawn = [];
     drawnCoords = [];
     // this stores how far below the parents the first child is drawn. This number gets bigger if there is an adoptive parent pair on the map.
+    // there are some constants at the top it he ngOnInit function call
     firstChildYDistance: number;
     firstChildYWithAdoptions: number;
+    // this is a constant value for all text spacing written on the map
+    textLineSpacing: number = 18;
+    textSize: string = ".9em";
 
     fullName: string;
     router: Router;
@@ -45,9 +49,11 @@ export class MapComponent {
 
     ngOnInit() {
 
-        const startX = 700;
+        // there are some constants at the top of the component class definition as well.
+        // these constants determine where to start drawing the map
+        const startX = 775;
         const startY = 200;
-        const parentDistance = 190;
+        const parentDistance = 220;
         const childDistance = 120;
 
         this.route.params.subscribe(function(params) {
@@ -130,7 +136,7 @@ export class MapComponent {
         this.drawnCoords = [];
         // this stores how far below the parents the first child is drawn. This number gets bigger if there is an adoptive parent pair on the map.
         this.firstChildYDistance = 20;
-        this.firstChildYWithAdoptions = 100;
+        this.firstChildYWithAdoptions = 130;
         let star = this.dataService.getPersonById(this.star_id);
         this.fullName = star.fName + " " + star.lName;
         // if dateFilter not yet set, set it to Star's 18th birthday
@@ -380,7 +386,7 @@ export class MapComponent {
 
             // if this is a pair bond that has been determined to go on the horizontal line with the adoptive parents, then set the YPos to be further down the page
             if ( /[Aa]dopted/.test(pairBond.subTypeToStar) ) {
-                YPos = startY + 120;
+                YPos = startY + 150;
             } else {
                 YPos = startY;
             }
@@ -395,7 +401,7 @@ export class MapComponent {
                     this.drawCircleHash(dad);
                 }
                 dad.d3Symbol = this.drawMaleSymbol(nextMaleX, YPos);
-                dad.d3Text = this.drawCircleText(nextMaleX - 125, YPos - 20, dad);
+                dad.d3Text = this.drawCircleText(nextMaleX - 170, YPos - 25, dad);
                 nextMaleX -= parentDistance;
                 this.alreadyDrawn.push(dad);
             } else if ( !dad ) {
@@ -413,7 +419,7 @@ export class MapComponent {
                     this.drawCircleHash(mom);
                 }
                 mom.d3Symbol = this.drawFemaleSymbol(nextFemaleX, YPos);
-                mom.d3Text = this.drawCircleText(nextFemaleX + 45, YPos - 20, mom);
+                mom.d3Text = this.drawCircleText(nextFemaleX + 45, YPos - 25, mom);
                 nextFemaleX += parentDistance;
                 this.alreadyDrawn.push(mom);
             } else if ( !mom ) {
@@ -584,7 +590,7 @@ export class MapComponent {
                     child.d3Star = this.drawStar(xPos, nextChildY, child);
                 }
                 child.d3TextBox = this.drawTextBox(xPos, nextChildY);
-                child.d3Text = this.drawCircleText(xPos + 50, nextChildY - 20, child);
+                child.d3Text = this.drawCircleText(xPos + 50, nextChildY - 25, child);
 
                 nextChildY += childDistance;
 
@@ -696,18 +702,20 @@ export class MapComponent {
 
     drawRelLine(mom, dad, color, relType) {
         let lineStrArr = [];
+        let yControlPoint: number;
         let line;
 
         lineStrArr.push("M");
         lineStrArr.push(dad.mapXPos);
         lineStrArr.push(dad.mapYPos - 40);
         lineStrArr.push("C");
+        // the smaller the Y coordinate of the control point, the higher the control point is on the map, and thus the more arc in the line
+        yControlPoint = (mom.mapYPos - 60) / (768 / dad.mapXPos);
         lineStrArr.push((mom.mapXPos - dad.mapXPos) / 4 + dad.mapXPos);
-        lineStrArr.push((mom.mapYPos - 40) / (768 / dad.mapXPos) + ",");
-        // lineStrArr.push((mom.mapYPos - 40) / (dad.mapXPos / 200) + ",");
+        lineStrArr.push( yControlPoint + ",");
         lineStrArr.push((mom.mapXPos - dad.mapXPos) / 4 * 3 + dad.mapXPos);
-        lineStrArr.push((mom.mapYPos - 40) / (768 / dad.mapXPos) + ",");
-        // lineStrArr.push((mom.mapYPos - 40) / (dad.mapXPos / 200) + ",");
+        lineStrArr.push( yControlPoint + ",");
+        // this is the ending point of the line
         lineStrArr.push(mom.mapXPos);
         lineStrArr.push(mom.mapYPos - 40);
 
@@ -725,30 +733,34 @@ export class MapComponent {
         }
 
         return line;
-
-        // return d3.select("svg")
-        // .append("path")
-        // .attr("d", lineStrArr.join(" "))
-        // .attr("fill", "transparent")
-        // .attr("stroke", color)
-        // .attr("stroke-width", 2);
     }
 
     drawAdoptiveRelLine(mom, dad, color, relType) {
         console.log("draw Adoptive Rel Line");
         let lineStrArr = [];
         let line;
+        let yControlPoint: number;
 
+        // yControlPoint is the control point of the Bezier curve that connects the adoptive parents. The higher it is on the map, the higher the arc of the curve.
+        // yControlPoint = 225;
+        // the bigger I make 200,000 - the lower the arc. 
+        // yControlPoint = 190000 / (mom.mapXPos - dad.mapXPos);
+        yControlPoint = 625 / Math.log10((mom.mapXPos - dad.mapXPos) / 2);
         lineStrArr.push("M");
-        lineStrArr.push(dad.mapXPos + 31);
-        lineStrArr.push(dad.mapYPos - 25);
+        // This is the beginning of the line, at the top of dad
+        lineStrArr.push(dad.mapXPos + 0);
+        lineStrArr.push(dad.mapYPos - 40);
         lineStrArr.push("C");
-        lineStrArr.push((mom.mapXPos - dad.mapXPos - 80) / 8 * 2 + dad.mapXPos + 40);
-        lineStrArr.push((mom.mapYPos - 80) + ",");
-        lineStrArr.push((mom.mapXPos - dad.mapXPos - 80) / 8 * 6 + dad.mapXPos + 40);
-        lineStrArr.push((mom.mapYPos - 80) + ",");
-        lineStrArr.push(mom.mapXPos - 31);
-        lineStrArr.push(mom.mapYPos - 25);
+
+        lineStrArr.push((mom.mapXPos - dad.mapXPos) / 8 * 2 + dad.mapXPos);
+        lineStrArr.push(yControlPoint);
+
+        lineStrArr.push((mom.mapXPos - dad.mapXPos) / 8 * 6 + dad.mapXPos);
+        lineStrArr.push(yControlPoint);
+
+        // This is the end point of the line, at the top of mom
+        lineStrArr.push(mom.mapXPos - 0);
+        lineStrArr.push(mom.mapYPos - 40);
 
         line = d3.select("svg")
         .append("path")
@@ -795,23 +807,23 @@ export class MapComponent {
                 .append("path")
                 .attr("d", lineFunction(lineData))
                 .attr("stroke", "blue")
-                .attr("stroke-width", 1)
+                .attr("stroke-width", 2)
                 .attr("fill", "none");
         } else if ( /[Ss]tep/.test(subType) ) {
             return d3.select("svg")
                 .append("path")
                 .attr("d", lineFunction(lineData))
                 .attr("stroke", "blue")
-                .attr("stroke-width", 1)
-                .style("stroke-dasharray", ("4,8"))
+                .attr("stroke-width", 2)
+                .style("stroke-dasharray", ("12,8"))
                 .attr("fill", "none");
         } else if ( /[Aa]dopted/.test(subType) ) {
             return d3.select("svg")
                 .append("path")
                 .attr("d", lineFunction(lineData))
                 .attr("stroke", "blue")
-                .attr("stroke-width", 1)
-                .style("stroke-dasharray", ("4,2"))
+                .attr("stroke-width", 2)
+                .style("stroke-dasharray", ("4,8"))
                 .attr("fill", "none");
         } else {
             alert("Parental subtype does not have type of line defined to draw: " + subType + ". This is for the parental relationship between: " + parent.fName + " " + parent.lName + " and " + child.fName + " " + child.lName);
@@ -858,9 +870,9 @@ export class MapComponent {
 
     drawTextBox(cx, cy) {
         let lineData = [
-            {"x": cx + 45, "y": cy - 35}, {"x": cx + 150, "y": cy - 35},
-            {"x": cx + 150, "y": cy + 10}, {"x": cx + 45, "y": cy + 10},
-            {"x": cx + 45, "y": cy - 35}
+            {"x": cx + 45, "y": cy - 45}, {"x": cx + 175, "y": cy - 45},
+            {"x": cx + 175, "y": cy + 20}, {"x": cx + 45, "y": cy + 20},
+            {"x": cx + 45, "y": cy - 45}
         ];
 
         let lineFunction = d3.line()
@@ -883,19 +895,19 @@ export class MapComponent {
                 // name
                 {"x": cx, "y": cy, "txt": person.fName + " " + person.lName},
                 // birth info
-                {"x": cx, "y": cy + 12, "txt": "DOB: " + this.dataService.getFormattedDate(person.birthDate)},
-                {"x": cx, "y": cy + 24, "txt": person.birthPlace},
+                {"x": cx, "y": cy + this.textLineSpacing, "txt": "DOB: " + this.dataService.getFormattedDateMMDDYYYY(person.birthDate)},
+                {"x": cx, "y": cy + (this.textLineSpacing * 2), "txt": person.birthPlace},
                 // death info
-                {"x": cx, "y": cy + 36, "txt": "DOD: " + this.dataService.getFormattedDate(person.deathDate)},
-                {"x": cx, "y": cy + 48, "txt": person.deathPlace}
+                {"x": cx, "y": cy + (this.textLineSpacing * 3), "txt": "DOD: " + this.dataService.getFormattedDateMMDDYYYY(person.deathDate)},
+                {"x": cx, "y": cy + (this.textLineSpacing * 4), "txt": person.deathPlace}
             ];
         } else {
             textData = [
                 // name
                 {"x": cx, "y": cy, "txt": person.fName + " " + person.lName},
                 // birth info
-                {"x": cx, "y": cy + 12, "txt": "DOB: " + this.dataService.getFormattedDate(person.birthDate)},
-                {"x": cx, "y": cy + 24, "txt": person.birthPlace}
+                {"x": cx, "y": cy + this.textLineSpacing, "txt": "DOB: " + this.dataService.getFormattedDateMMDDYYYY(person.birthDate)},
+                {"x": cx, "y": cy + (this.textLineSpacing * 2), "txt": person.birthPlace}
             ];
         }
 
@@ -910,8 +922,9 @@ export class MapComponent {
             .attr("y", function(d) { return d.y; })
             .text(function(d)     { return d.txt; })
             .attr("font-family", "sans-serif")
-            .attr("font-size", ".75em")
-            .attr("fill", "black");
+            .attr("font-size", this.textSize)
+            .attr("fill", "black")
+            .attr("font-weight", "600");
     }
 
     drawRelText(mom, dad, pairBondRel) {
@@ -921,20 +934,21 @@ export class MapComponent {
         let cx, cy;
 
         // xPos is halfway between mom and dad, and then minus a few pixels for rough centering
-        cx = (mom.mapXPos - dad.mapXPos) / 2 + dad.mapXPos - 30;
+        cx = (mom.mapXPos - dad.mapXPos) / 2 + dad.mapXPos - 45;
 
         // if this pair bond shows up on the adopted line, the curve is different, so calculate the y position differently
         if (pairBondRel.subTypeToStar === "Adopted") {
             cy = (mom.mapYPos) - 30;
         } else {
             // yPos needs to account for the curve of the rel line
-            cy = (mom.mapYPos - 40) / 2 - 5; //
+            // cy = (mom.mapYPos - 40) / 2 - 5;
+            cy = (mom.mapYPos - 160);
         }
 
         // check to see if there is already a text box drawn near here
         let coord = this.drawnCoords.find(
                 function(coord) {
-                    return Math.abs(cx - coord.x) < 90 && Math.abs(cy - coord.y) < 25;
+                    return Math.abs(cx - coord.x) < 120 && Math.abs(cy - coord.y) < 25;
                 }
             );
         // until there is not a text box here, continue to push the text box until there is room for it
@@ -942,7 +956,7 @@ export class MapComponent {
             cx += 1;
             coord = this.drawnCoords.find(
                 function(coord) {
-                    return Math.abs(cx - coord.x) < 90 && Math.abs(cy - coord.y) < 25;
+                    return Math.abs(cx - coord.x) < 120 && Math.abs(cy - coord.y) < 25;
                 }
             );
         }
@@ -962,7 +976,7 @@ export class MapComponent {
                 // apart info
                 {
                     "x": cx + 3,
-                    "y": cy + 12,
+                    "y": cy + this.textLineSpacing,
                     "txt": this.getRelTextEndPrefix(pairBondRel.relationshipType) +
                     this.dataService.getFormattedDate(pairBondRel.endDate)
                 },
@@ -972,7 +986,7 @@ export class MapComponent {
                 // together info
                 {
                     "x": cx,
-                    "y": cy + 12,
+                    "y": cy,
                     "txt": this.getRelTextPrefix(pairBondRel.relationshipType) +
                     this.dataService.getFormattedDate(pairBondRel.startDate)}
             ];
@@ -997,8 +1011,9 @@ export class MapComponent {
             .attr("y", function(d) { return d.y; })
             .text(function(d)     { return d.txt; })
             .attr("font-family", "sans-serif")
-            .attr("font-size", ".75em")
-            .attr("fill", pairBondRel.color);
+            .attr("font-size", this.textSize)
+            .attr("fill", pairBondRel.color)
+            .attr("font-weight", "600");
     }
 
     getRelTextPrefix(relType) {
@@ -1118,8 +1133,11 @@ export class MapComponent {
         let cx = (mom.mapXPos - dad.mapXPos) / 2 + dad.mapXPos;
 
         // yPos needs to account for the curve of the rel line
-        let cy = (mom.mapYPos - 40) / (768 / dad.mapXPos) + 10; // + .1 * (mom.mapYPos - dad.mapPos);
-
+        // controlPoint is the controlPoint of the Bezier line that is drawn between the male and female of the relationship. I use it to calculate the y coordinate to draw the relationship hash. It was very experimental to figure out the equation that works
+        const yControlPoint = (mom.mapYPos - 60) / (768 / dad.mapXPos);
+        // dad.mapYPos - 40 is the Y position of where the relationship line begins and ends. 
+        // What I do is take the control point and then push the hash mark down a little. Push it down by taking the amount of space between the control point and the beginning of the line and then take a fraction of that.
+        let cy = yControlPoint + ( (dad.mapYPos - 40) - yControlPoint ) / 4;
         let lineData = [
             {"x": cx - 7, "y": cy + 5}, {"x": cx + 7, "y": cy - 5},
         ];
@@ -1154,10 +1172,17 @@ export class MapComponent {
 
     drawAdoptiveRelHash (mom, dad, pairBondRel, color) {
         // xPos is halfway between mom and dad, and then minus a few pixels for rough centering
-        let cx = (mom.mapXPos - dad.mapXPos) / 2 + dad.mapXPos;
+        const cx = (mom.mapXPos - dad.mapXPos) / 2 + dad.mapXPos;
 
         // yPos needs to account for the curve of the rel line
-        let cy = mom.mapYPos - 65;
+        // let cy = mom.mapYPos - 65;
+        // yPos needs to account for the curve of the rel line
+        // controlPoint is the controlPoint of the Bezier line that is drawn between the male and female of the relationship. I use it to calculate the y coordinate to draw the relationship hash. It was very experimental to figure out the equation that works
+        // const yControlPoint = 225;
+        const yControlPoint = 625 / Math.log10((mom.mapXPos - dad.mapXPos) / 2);
+        // dad.mapYPos - 40 is the Y position of where the relationship line begins and ends. 
+        // What I do is take the control point and then push the hash mark down a little. Push it down by taking the amount of space between the control point and the beginning of the line and then take a fraction of that.
+        let cy = yControlPoint + ( (dad.mapYPos - 40) - yControlPoint ) / 4;
 
         let lineData = [
             {"x": cx - 7, "y": cy + 5}, {"x": cx + 7, "y": cy - 5},

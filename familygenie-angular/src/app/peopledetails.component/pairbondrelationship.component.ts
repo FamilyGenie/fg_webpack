@@ -1,6 +1,7 @@
 import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { DataService } from "../data-service";
 import { Router, ActivatedRoute } from "@angular/router";
+import { MyDatePickerModule } from "mydatepicker";
 
 @Component({
     selector: "pairbondrelationship",
@@ -51,22 +52,34 @@ import { Router, ActivatedRoute } from "@angular/router";
                 </select>
             </div>
             <div *ngIf="this.personFullName" class="col-xs-2 custom-input">
-                <input
+                <my-date-picker 
+                    [options]="myDatePickerOptions"
+                    [selDate]="this.dataService.getFormattedDateMMDDYYYY(pairBondRel.startDate)"
+                    (dateChanged)="onUpdate($event, 'startDate')"
+                >
+                </my-date-picker>
+                <!-- <input
                     data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1"
                     class="form-control"
                     type="date"
                     [ngModel]="this.dataService.getFormattedDate(pairBondRel.startDate)"
                     (blur)="onUpdate($event, 'startDate')"
-                />
+                /> -->
             </div>
             <div *ngIf="this.personFullName" class="col-xs-2 custom-input">
-                <input
+                <my-date-picker 
+                    [options]="myDatePickerOptions"
+                    [selDate]="this.dataService.getFormattedDateMMDDYYYY(pairBondRel.endDate)"
+                    (dateChanged)="onUpdate($event, 'endDate')"
+                >
+                </my-date-picker>
+                <!-- <input
                     data-toggle="tooltip" data-placement="top" title="If only year is known, enter it as Jan 1"
                     class="form-control"
                     type="date"
                     [ngModel]="this.dataService.getFormattedDate(pairBondRel.endDate)"
                     (blur)="onUpdate($event, 'endDate')"
-                />
+                /> -->
             </div>
             <div class="col-xs-2 custom-input">
                 <button class="btn btn-primary btn-round" 
@@ -87,6 +100,8 @@ export class PairBondRelationshipComponent {
     pairBond_id: string;
     relTypes = ["Marriage", "Informal"];
     router: Router;
+    // set the myDatePickerOptions so it shows correctly. Use a global service from dataService so that all datepickers across the app work the same way
+    myDatePickerOptions: any = this.dataService.setMyDatePickerOptions();
 
     constructor (
         private dataService: DataService,
@@ -172,10 +187,12 @@ export class PairBondRelationshipComponent {
                 this.pairBondRel.relationshipType = evt.target.value;
                 break;
             case "startDate":
-                this.pairBondRel.startDate = evt.target.value;
+                // this.pairBondRel.startDate = evt.target.value;
+                this.pairBondRel.startDate = this.dataService.dateConvertMMDDYYYYtoYYYYMMDD(evt.formatted);
                 break;
             case "endDate":
-                this.pairBondRel.endDate = evt.target.value;
+                // this.pairBondRel.endDate = evt.target.value;
+                this.pairBondRel.endDate = this.dataService.dateConvertMMDDYYYYtoYYYYMMDD(evt.formatted);
                 break;
             default:
                 console.log("in default of update pairbond switch statement");

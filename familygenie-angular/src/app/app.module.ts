@@ -1,6 +1,5 @@
 import { NgModule }      from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
-// import { provideRouter } from "@angular/router";
 import { routing } from "./routes";
 import { FormsModule } from "@angular/forms";
 // added for LocalStorage
@@ -26,6 +25,9 @@ import { LoginComponent } from "./login-component/login.component";
 import { AuthGuard } from "./auth-service/auth-guard.service";
 import { AuthService } from "./auth-service/auth.service";
 import { UploadComponent } from "./upload-component/upload.component";
+// import { AirDatepicker } from "angular2-air-datepicker";
+import { MyDatePickerModule } from "mydatepicker";
+
 
 @NgModule({
     imports:      [
@@ -33,7 +35,8 @@ import { UploadComponent } from "./upload-component/upload.component";
         routing,
         HttpModule,
         FormsModule,
-        CoolStorageModule
+        CoolStorageModule,
+        MyDatePickerModule
     ],
     declarations: [
         AppComponent,

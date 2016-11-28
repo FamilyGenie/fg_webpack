@@ -1,0 +1,12 @@
+/*
+* Remove bolding of the fonts.
+*/
+.mydp .selection,
+.mydp .weekdaytitle,
+.mydp .monthinput,
+.mydp .yearinput {
+    font-weight: normal;
+    box-shadow: none;
+    color: #777777;
+}
+
