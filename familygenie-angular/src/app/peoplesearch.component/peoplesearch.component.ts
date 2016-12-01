@@ -2,12 +2,11 @@ import { Component } from "@angular/core";
 import { DataService } from "../data-service";
 import { PeopleSearchLineItemComponent } from "./peoplesearch-lineitem.component";
 import { Router } from "@angular/router";
+import { Pipe, PipeTransform } from "@angular/core";
+import { OrderByPipe } from "../pipes/orderBy";
 
 @Component({
     selector: "people-search",
-    // directives: [
-    //     PeopleSearchLineItemComponent
-    // ],
     template: `
         <div class="container">
             <h1>Family Members</h1>
@@ -15,27 +14,39 @@ import { Router } from "@angular/router";
         <div class="container select-container"> 
             
                     <div class="row">
-                        <div class="col-xs-2 title bold">
+                        <div class="col-xs-2 title bold can-click"
+                            (click)="setSortBy('fName')"
+                        >
                             First Name
                         </div>
-                        <div class="col-xs-2 title bold">
+                        <div class="col-xs-2 title bold can-click"
+                            (click)="setSortBy('mName')"
+                        >
                             Middle
                         </div>
-                        <div class="col-xs-2 title bold">
+                        <div class="col-xs-2 title bold can-click"
+                            (click)="setSortBy('lName')"
+                        >
                             Last Name
                         </div>
-                        <div class="col-xs-2 title bold">
+                        <div class="col-xs-2 title bold can-click"
+                            (click)="setSortBy('birthDate')"
+                        >
                             Birth Date
                         </div>
-                        <div class="col-xs-2 title bold">
+                        <div class="col-xs-2 title bold can-click"
+                            (click)="setSortBy('birthPlace')"
+                        >
                             Birth Place
                         </div>
-                        <div class="col-xs-1 title bold">
+                        <div class="col-xs-1 title bold can-click"
+                            (click)="setSortBy('sexAtBirth')"
+                        >
                             Gender
                         </div>
                     </div>
                     <peoplesearch-lineitem
-                        *ngFor="let person of dataService.persons;"
+                        *ngFor="let person of dataService.persons | orderBy: sortBy"
                         [person]="person"
                     ></peoplesearch-lineitem>
             
@@ -51,9 +62,18 @@ import { Router } from "@angular/router";
 export class PeopleSearchComponent {
 
     router: Router;
+    varSortBy: string = "birthDate";
 
     constructor (private dataService: DataService, _router: Router) {
         this.router = _router;
+    }
+
+    get sortBy() {
+        return this.varSortBy;
+    }
+
+    setSortBy(input: string): void {
+        this.varSortBy = input;
     }
 
     ngOnInit() {

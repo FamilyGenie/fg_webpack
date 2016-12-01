@@ -27,6 +27,7 @@ import { AuthService } from "./auth-service/auth.service";
 import { UploadComponent } from "./upload-component/upload.component";
 // import { AirDatepicker } from "angular2-air-datepicker";
 import { MyDatePickerModule } from "mydatepicker";
+import { OrderByPipe } from "./pipes/orderBy";
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { MyDatePickerModule } from "mydatepicker";
         PersonChangeComponent,
         UploadComponent,
         LoginComponent,
-        MainContainer
+        MainContainer,
+        OrderByPipe
     ],
     bootstrap:    [ MainContainer ],
     providers:    [
