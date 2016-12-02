@@ -63,17 +63,39 @@ export class PeopleSearchComponent {
 
     router: Router;
     varSortBy: string = "birthDate";
+    varSortByAsc: boolean = false;
+    lastSortBy: string = "birthDate";
 
     constructor (private dataService: DataService, _router: Router) {
         this.router = _router;
     }
 
     get sortBy() {
+        // this.varSortByAsc = !this.varSortByAsc;
+        // console.log("in get sortBy: ", this.varSortByAsc);
         return this.varSortBy;
     }
 
     setSortBy(input: string): void {
-        this.varSortBy = input;
+
+        // if the last time was a desc search
+        if ( this.varSortBy.substr(0, 1) === "-") {
+            // then if the colunm was the same as last time, reverse the order
+            if (this.varSortBy.substr(1, this.varSortBy.length) === input ) {
+                this.varSortBy = input;
+            }
+            // if the column was not the same as last time, the we want to keep the sort asc
+            else {
+                this.varSortBy = input;
+            }
+        } else {
+            // if the first character was not a "-", means that the last search was asc
+            if (this.varSortBy.substr(0, this.varSortBy.length) === input ) {
+                this.varSortBy = "-" + input;
+            } else {
+                this.varSortBy = input;
+            }
+        }
     }
 
     ngOnInit() {
