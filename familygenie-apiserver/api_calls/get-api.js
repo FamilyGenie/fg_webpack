@@ -1,7 +1,7 @@
 var auth = require('../authentication');
 var mongoose = require('mongoose');
 
-module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel) {
+module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel, EventsModel) {
 	app.get('/people', auth.isAuthenticated, function(req, res) {
 		console.log("in get people:", req.decoded._doc.userName);
 		var user = req.decoded._doc.userName;
@@ -86,6 +86,23 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 					return;
 				}
 				// console.log("Results from get.parentRels:", JSON.stringify(data));
+				res.send(JSON.stringify(data));
+			}
+		);
+	});
+
+	app.get('/events', auth.isAuthenticated, function(req, res) {
+		// ParentalRelTypes are not different for different users, so do not filter by user_id
+		EventsModel.find(
+			{
+			}, 
+			function(err, data) {
+				if(err) {
+					res.status(500);
+					res.send("Error getting all Events", err);
+					return;
+				}
+				// console.log("Results from get.Events:", JSON.stringify(data));
 				res.send(JSON.stringify(data));
 			}
 		);
