@@ -1,11 +1,7 @@
 import { Component, Input } from "@angular/core";
 import { DataService } from "../data-service";
-// import { FORM_DIRECTIVES } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { Router } from "@angular/router";
-// import { MD_BUTTON_DIRECTIVES } from "@angular2-material/button";
-// import { MD_RIPPLE_DIRECTIVES } from "@angular2-material/core";
-// import { MD_GRID_LIST_DIRECTIVES } from "@angular2-material/grid-list";
 
 
 @Component({
@@ -46,7 +42,7 @@ import { Router } from "@angular/router";
                         class="form-control"
                         type="text"
                         readonly
-                        [ngModel]="this.dataService.getFormattedDateMMDDYYYY(person.birthDate)"
+                        [ngModel]="person.birthDate | date:dateFormat"
                     />
                 </div>
                 <div class="col-xs-2 custom-input">
@@ -81,6 +77,14 @@ export class PeopleSearchLineItemComponent {
         this.router = _router;
     }
 
+    ngOnInit (): void {
+        // console.log(this.person.birthDate.substr(0, this.person.birthDate.length));
+        // console.log(this.person.lName.substr(0, this.person.lName.length));
+    }
+
+    get dateFormat() {
+        return "MM/dd/yyyy";
+    }
     showPerson() {
         this.router.navigate([
             "peopledetails",

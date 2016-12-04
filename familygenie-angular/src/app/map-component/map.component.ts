@@ -710,10 +710,13 @@ export class MapComponent {
         lineStrArr.push(dad.mapYPos - 40);
         lineStrArr.push("C");
         // the smaller the Y coordinate of the control point, the higher the control point is on the map, and thus the more arc in the line
-        yControlPoint = (mom.mapYPos - 60) / (768 / dad.mapXPos);
-        lineStrArr.push((mom.mapXPos - dad.mapXPos) / 4 + dad.mapXPos);
+        console.log("momYPos, momXPos, dadXPos: ", mom.mapYPos, mom.mapXPos, dad.mapXPos);
+        // yControlPoint = (mom.mapYPos - 60) / (768 / dad.mapXPos);
+        // yControlPoint = (mom.mapYPos - 80) / (4 * (mom.mapXPos - dad.mapXPos) / 1400);
+        yControlPoint = (mom.mapYPos - 60) / ((mom.mapXPos - dad.mapXPos) / 250);
+        lineStrArr.push((mom.mapXPos - dad.mapXPos) / 8 * 2 + dad.mapXPos);
         lineStrArr.push( yControlPoint + ",");
-        lineStrArr.push((mom.mapXPos - dad.mapXPos) / 4 * 3 + dad.mapXPos);
+        lineStrArr.push((mom.mapXPos - dad.mapXPos) / 8 * 6 + dad.mapXPos);
         lineStrArr.push( yControlPoint + ",");
         // this is the ending point of the line
         lineStrArr.push(mom.mapXPos);
@@ -1134,7 +1137,8 @@ export class MapComponent {
 
         // yPos needs to account for the curve of the rel line
         // controlPoint is the controlPoint of the Bezier line that is drawn between the male and female of the relationship. I use it to calculate the y coordinate to draw the relationship hash. It was very experimental to figure out the equation that works
-        const yControlPoint = (mom.mapYPos - 60) / (768 / dad.mapXPos);
+        // const yControlPoint = (mom.mapYPos - 60) / (768 / dad.mapXPos);
+        const yControlPoint = (mom.mapYPos - 60) / ((mom.mapXPos - dad.mapXPos) / 250);
         // dad.mapYPos - 40 is the Y position of where the relationship line begins and ends. 
         // What I do is take the control point and then push the hash mark down a little. Push it down by taking the amount of space between the control point and the beginning of the line and then take a fraction of that.
         let cy = yControlPoint + ( (dad.mapYPos - 40) - yControlPoint ) / 4;
