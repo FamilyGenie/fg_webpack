@@ -1,11 +1,11 @@
 var auth = require('../authentication');
 var mongoose = require('mongoose');
 
-module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel) {
+module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel, EventsModel) {
 	app.post('/update', auth.isAuthenticated, function(req, res){
-		// console.log("in update with:", req.body, req.header);
+    console.log("in update with:", req.body.objectType);
 		// console.log("req.body.object._id",req.body.object._id);
-		id = req.body.object._id;
+		var id = req.body.object._id;
 		var user = req.decoded._doc.userName;
 
 		if (req.body.objectType === "person") {
@@ -101,6 +101,30 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 				lName: req.body.object.lName,
 				sex: req.body.object.sex,
 				user_id: user
+			}},
+				{new: true},
+				function(err, data) {
+					if(err) {
+						res.status(500);
+						res.send("Error updating person change data");
+						return;
+					}
+					res.send(data);
+				}
+			);
+		} else if (req.body.objectType === "events") {
+      console.log('object: ', req.body.object)
+			EventsModel.findOneAndUpdate(
+				{
+					_id: id,
+					user_id: user
+				},
+				{$set: {
+        person_id: req.body.object.person_id,
+        type: req.body.object.type,
+        date: req.body.object.date,
+        place: req.body.object.place,
+        details: req.body.object.details
 			}},
 				{new: true},
 				function(err, data) {

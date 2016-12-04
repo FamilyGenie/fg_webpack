@@ -17,11 +17,12 @@ var user;
 
 mongoose.connect('mongodb://localhost');
 
-var PersonModel = require('./person.model.js')(mongoose);
-var PairBondRelModel = require('./pairbond-relationship.model.js')(mongoose, PersonModel);
-var ParentalRelModel = require('./parental-relationship.model.js')(mongoose, PersonModel);
-var ParentalRelTypeModel = require('./parentalreltype.model.js')(mongoose, PersonModel);
-var PersonChangeModel = require('./personchange.model.js')(mongoose, PersonModel);
+var PersonModel = require('./models/person.model.js')(mongoose);
+var PairBondRelModel = require('./models/pairbond-relationship.model.js')(mongoose, PersonModel);
+var ParentalRelModel = require('./models/parental-relationship.model.js')(mongoose, PersonModel);
+var ParentalRelTypeModel = require('./models/parentalreltype.model.js')(mongoose, PersonModel);
+var PersonChangeModel = require('./models/personchange.model.js')(mongoose, PersonModel);
+var EventsModel = require('./models/events.model.js')(mongoose);
 
 var app = express();
 
@@ -47,10 +48,10 @@ app.use(function(req, res, next) {
 
 require("./passport/passport.routes")(app,passport);
 
-require("./api_calls/get-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
-require("./api_calls/create-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
-require("./api_calls/update-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
-require("./api_calls/delete-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel);
+require("./api_calls/get-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel, EventsModel);
+require("./api_calls/create-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel, EventsModel);
+require("./api_calls/update-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel, EventsModel);
+require("./api_calls/delete-api")(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel, EventsModel);
 require("./gedcom/gedcom.js")(app, mongoose, bodyParser, passport);
 
 /*app.get('*', function(req, res){

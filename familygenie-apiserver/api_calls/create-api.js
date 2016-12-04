@@ -1,7 +1,7 @@
 var auth = require('../authentication');
 var mongoose = require('mongoose');
 
-module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel) {
+module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel, EventsModel) {
 	app.post('/create', auth.isAuthenticated, function(req, res){
 		var object;
 		var user = req.decoded._doc.userName;
@@ -90,6 +90,23 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 				}
 				res.send(JSON.stringify(data));
 			});
-		}
+    } else if (req.body.objectType === "events") {
+      object = {
+        person_id: req.body.object.person_id,
+        type: req.body.object.person_id,
+        date: req.body.object.date,
+        place: req.body.object.place,
+        details: req.body.object.details
+      };
+      new EventsModel(object).save(function(err, data){
+        if (err) {
+          console.log("Create Events error:", err);
+          res.status(500);
+          res.send("Error creating event");
+          return;
+        }
+        res.send(JSON.stringify(data));
+      });
+    }
 	});
 };
