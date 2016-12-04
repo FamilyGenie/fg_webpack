@@ -1,7 +1,7 @@
 var auth = require('../authentication');
 var mongoose = require('mongoose');
 
-module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel) {
+module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel, EventsModel) {
 	app.post('/delete', auth.isAuthenticated, function(req, res) {
 		var user = req.decoded._doc.userName;
 
@@ -114,6 +114,34 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 					}
 				);
 			});
+		} else if (req.body.objectType === "events") {
+			console.log("delete events ", req.body._id);
+			EventsModel.remove(
+				{
+					_id: req.body._id,
+					user_id: user
+				},
+			function(err) {
+				if (err) {
+					res.status(500);
+					res.send("Error deleting events", err);
+					return;
+				}
+				EventsModel.find(
+					{ 
+						user_id: user
+					}, // filter object - empty filter catches everything
+					function(err, data) {
+						if(err) {
+							res.status(500);
+							res.send("Error getting all events after delete", err);
+							return;
+						}
+						res.send(JSON.stringify(data));
+					}
+				);
+			});
 		}
+
 	});
 };
