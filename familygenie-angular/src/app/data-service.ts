@@ -4,6 +4,18 @@ import { ApiService } from "./api.service";
 @Injectable()
 export class DataService {
 
+    /* 
+    Here are some notes on how the DataService and the node server API communicate with each other. The DataService stores all info that the Angular app uses in the arrays that are initilaized below. 
+
+    GET: When the get is called, the api returns all the records for that collection (for that user). The DataService, then sets the local array to the results.
+
+    CREATE: When a new record is created, the api returns the newly created record, and the DataService pushes the new record onto the local array.
+    
+    DELETE: When a record is deleted, the node api returns all remaining records for that user in the collection. The DataService then replaces the local array with the results that are received from the api.
+
+    UPDATE: When a record is updated, the node api returns the newly updated record. The DataService then calls the function "overwrite", which overwrites that record in the local array.
+    */
+
     // only doing this while we don't have a backend database that we can get the unique ID from
     // next_id: number = 1000;
     persons = [];
@@ -11,6 +23,7 @@ export class DataService {
     pairBondRelationships = [];
     parentalRelTypes = [];
     personChanges = [];
+    events = [];
     // store this here for now, rather that in the database. Needs to move to database eventually
     genderOptions = ["", "M", "F"];
 
@@ -35,6 +48,7 @@ export class DataService {
         this.getAllPairBondRels().subscribe();
         this.getAllParentalRelTypes().subscribe();
         this.getAllPersonChanges().subscribe();
+        this.getAllEvents().subscribe();
     }
 
     clearAllData() {
@@ -44,6 +58,7 @@ export class DataService {
         this.pairBondRelationships = [];
         this.parentalRelTypes = [];
         this.personChanges = [];
+        this.events = [];
     }
 
     getAllPeople() {
@@ -85,7 +100,15 @@ export class DataService {
         return this.apiService.get("/personchanges")
             .do(function(res) {
                 this.personChanges = res;
-                console.log("after get of personChanges with:", res);
+            }.bind(this)
+        );
+    }
+
+    getAllEvents () {
+        return this.apiService.get("/events")
+            .do(function(res) {
+                this.events = res;
+                console.log("after get of events with:", res);
             }.bind(this)
         );
     }
@@ -163,7 +186,6 @@ export class DataService {
     }
 
     createPersonChange(star_id: string) {
-        console.log("in dataService.createPersonChange");
         return this.apiService.post("/create", JSON.stringify({
             objectType: "personChange",
             object: {
@@ -175,8 +197,24 @@ export class DataService {
                 sex: ""
             }
         })).do(function(res) {
-            console.log("after createPersonChange. Result is:", res);
             this.personChanges.push(res);
+        }.bind(this));
+    }
+
+    createEvent() {
+        console.log("in dataService.createEvents");
+        return this.apiService.post("/create", JSON.stringify({
+            objectType: "event",
+            object: {
+                person_id : "",
+                type : "",
+                eventDate : "",
+                place : "",
+                details : ""
+            }
+        })).do(function(res) {
+            console.log("after createEvent. Result is:", res);
+            this.events.push(res);
         }.bind(this));
     }
 
@@ -235,13 +273,22 @@ export class DataService {
     }
 
     deletePersonChange(_id: string) {
-        console.log("in dataService.deletePersonChange, with:", _id);
-
         return this.apiService.post("/delete", JSON.stringify({
             objectType: "personChange",
             _id: _id
         })).do(function(res) {
             this.personChanges = res;
+        }.bind(this));
+    }
+
+    deleteEvent(_id: string) {
+        console.log("in dataService.deleteEvent, with:", _id);
+
+        return this.apiService.post("/delete", JSON.stringify({
+            objectType: "event",
+            _id: _id
+        })).do(function(res) {
+            this.events = res;
         }.bind(this));
     }
 
@@ -277,12 +324,21 @@ export class DataService {
     }
 
     updatePersonChange(newValue) {
-        console.log("in dataService.updatePersonChange", newValue);
         return this.apiService.post("/update", JSON.stringify({
             objectType: "personChange",
             object: newValue
             })).do(function(res){
                 this.overwrite(this.getPersonChangeById(newValue._id));
+        }.bind(this));
+    }
+
+    updateEvent(newValue) {
+        console.log("in dataService.updateEvent", newValue);
+        return this.apiService.post("/update", JSON.stringify({
+            objectType: "event",
+            object: newValue
+            })).do(function(res){
+                this.overwrite(this.getEventById(newValue._id));
         }.bind(this));
     }
 
@@ -303,6 +359,13 @@ export class DataService {
     getPersonChangeById(_id: string) {
         return this.personChanges.find(function(personChange){
             return personChange._id === _id;
+            }
+        );
+    }
+
+    getEventById(_id: string) {
+        return this.events.find(function(event){
+            return event._id === _id;
             }
         );
     }

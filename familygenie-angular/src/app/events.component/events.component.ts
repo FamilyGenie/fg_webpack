@@ -1,14 +1,14 @@
 import { Component } from "@angular/core";
 import { DataService } from "../data-service";
-import { PeopleSearchLineItemComponent } from "./peoplesearch-lineitem.component";
+// import { PeopleSearchLineItemComponent } from "./peoplesearch-lineitem.component";
 import { Router } from "@angular/router";
 import { OrderByPipe } from "../pipes/orderBy";
 
 @Component({
-    selector: "people-search",
+    selector: "events",
     template: `
         <div class="container">
-            <h1>Family Members</h1>
+            <h1>Family Life Fact Chronology</h1>
         </div>
         <div class="container select-container"> 
             
@@ -16,52 +16,48 @@ import { OrderByPipe } from "../pipes/orderBy";
                         <div class="col-xs-2 title bold can-click"
                             (click)="setSortBy('fName')"
                         >
-                            First Name
+                            Who
                         </div>
                         <div class="col-xs-2 title bold can-click"
                             (click)="setSortBy('mName')"
                         >
-                            Middle
+                            What
                         </div>
                         <div class="col-xs-2 title bold can-click"
                             (click)="setSortBy('lName')"
                         >
-                            Last Name
+                            When
                         </div>
                         <div class="col-xs-2 title bold can-click"
                             (click)="setSortBy('birthDate')"
                         >
-                            Birth Date
+                            Where
                         </div>
-                        <div class="col-xs-2 title bold can-click"
+                        <div class="col-xs-4 title bold can-click"
                             (click)="setSortBy('birthPlace')"
                         >
-                            Birth Place
-                        </div>
-                        <div class="col-xs-1 title bold can-click"
-                            (click)="setSortBy('sexAtBirth')"
-                        >
-                            Gender
+                            Details
                         </div>
                     </div>
-                    <peoplesearch-lineitem
-                        *ngFor="let person of dataService.persons | orderBy: sortBy"
-                        [person]="person"
-                    ></peoplesearch-lineitem>
-            
+                    <events-lineitem
+                        *ngFor="let event of dataService.events | orderBy: sortBy"
+                        [event]="event"
+                        (onUpdateEvent)="updateEvent($event)"
+                    ></events-lineitem>
+
                     <div class="row">
                         <div class="col-xs-1 title">
                             <br>
-                            <button class="btn btn-primary btn-round" (click)="createPerson()">Add Person</button>
+                            <button class="btn btn-primary btn-round" (click)="createEvent()">Add Event</button>
                         </div>
                     </div>
         </div>
     `
 })
-export class PeopleSearchComponent {
+export class EventsComponent {
 
     router: Router;
-    varSortBy: string = "birthDate";
+    varSortBy: string = "eventDate";
 
     constructor (private dataService: DataService, _router: Router) {
         this.router = _router;
@@ -71,6 +67,11 @@ export class PeopleSearchComponent {
         // this.varSortByAsc = !this.varSortByAsc;
         // console.log("in get sortBy: ", this.varSortByAsc);
         return this.varSortBy;
+    }
+
+    updateEvent(evt) {
+        console.log("in event.component updateEvent:", evt);
+        this.dataService.updateEvent(evt).subscribe();
     }
 
     setSortBy(input: string): void {
@@ -95,23 +96,7 @@ export class PeopleSearchComponent {
         }
     }
 
-    ngOnInit() {
-        // when this page is brought up, check to see if the firt person in the array has an id of 0. If so, remove that record. If it exists, it was added by the pairbondrelationship component, or the parentalrelationship component. In the getAllPeople method of that component. It is not needed here, and would cause an error if someone saw it and tried to delete it.
-        if (this.dataService.persons.find( function(person) {
-                return person._id === 0;
-            })) {
-            this.dataService.persons.splice(0, 1);
-        }
-    }
-
-    createPerson() {
-        this.dataService.createPerson().subscribe( function(newId) {
-            // route to new person created
-            this.router.navigate([
-                "peopledetails",
-                newId
-                ]
-            );
-        }.bind(this));
+    createEvent() {
+        this.dataService.createEvent().subscribe();
     }
 }

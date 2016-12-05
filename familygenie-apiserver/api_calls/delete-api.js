@@ -114,7 +114,7 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 					}
 				);
 			});
-		} else if (req.body.objectType === "events") {
+		} else if (req.body.objectType === "event") {
 			console.log("delete events ", req.body._id);
 			EventsModel.remove(
 				{

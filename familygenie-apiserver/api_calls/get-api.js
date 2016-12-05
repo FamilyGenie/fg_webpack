@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 
 module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, ParentalRelTypeModel, PersonChangeModel, EventsModel) {
 	app.get('/people', auth.isAuthenticated, function(req, res) {
-		console.log("in get people:", req.decoded._doc.userName);
 		var user = req.decoded._doc.userName;
 		PersonModel.find(
 			{
@@ -92,9 +91,10 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 	});
 
 	app.get('/events', auth.isAuthenticated, function(req, res) {
-		// ParentalRelTypes are not different for different users, so do not filter by user_id
+		var user = req.decoded._doc.userName;
 		EventsModel.find(
 			{
+				user_id: user
 			}, 
 			function(err, data) {
 				if(err) {

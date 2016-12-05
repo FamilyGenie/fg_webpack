@@ -18,12 +18,13 @@ import { PeopleDetailsLineItemComponent } from "./peopledetails.component/people
 import { ParentalRelationshipComponent } from "./peopledetails.component/parentalrelationship.component";
 import { PairBondRelationshipComponent } from "./peopledetails.component/pairbondrelationship.component";
 import { PersonChangeComponent } from "./peopledetails.component/personchange.component";
+import { EventsComponent } from "./events.component/events.component";
+import { EventsLineItemComponent } from "./events.component/events-lineitem.component";
 import { ApiService } from "./api.service";
 import { LoginComponent } from "./login-component/login.component";
 import { AuthGuard } from "./auth-service/auth-guard.service";
 import { AuthService } from "./auth-service/auth.service";
 import { UploadComponent } from "./upload-component/upload.component";
-// import { AirDatepicker } from "angular2-air-datepicker";
 import { MyDatePickerModule } from "mydatepicker";
 import { OrderByPipe } from "./pipes/orderBy";
 
@@ -48,6 +49,8 @@ import { OrderByPipe } from "./pipes/orderBy";
         ParentalRelationshipComponent,
         PairBondRelationshipComponent,
         PersonChangeComponent,
+        EventsComponent,
+        EventsLineItemComponent,
         UploadComponent,
         LoginComponent,
         MainContainer,

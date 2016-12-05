@@ -49,14 +49,6 @@ export class PeopleDetailsLineItemComponent {
             ]);
     }
 
-    onDateChange(evt) {
-        console.log("in onDateChange: ", evt.valid);
-    }
-
-    onDateLeave(evt) {
-        console.log("in onDateLeave: ", evt);
-    }
-
     onUpdate(evt, field) {
         // console.log("in people details lineitem update", field, evt);
         switch (field) {

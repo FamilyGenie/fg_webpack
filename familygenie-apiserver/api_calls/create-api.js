@@ -90,13 +90,15 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 				}
 				res.send(JSON.stringify(data));
 			});
-    } else if (req.body.objectType === "events") {
+    } else if (req.body.objectType === "event") {
+   		console.log("in create event with user: ", user);
       object = {
         person_id: req.body.object.person_id,
         type: req.body.object.person_id,
-        date: req.body.object.date,
+        eventDate: req.body.object.date,
         place: req.body.object.place,
-        details: req.body.object.details
+        details: req.body.object.details,
+		user_id: user
       };
       new EventsModel(object).save(function(err, data){
         if (err) {

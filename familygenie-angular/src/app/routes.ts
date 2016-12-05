@@ -7,6 +7,7 @@ import { AboutComponent } from "./about.component";
 import { MapComponent } from "./map-component/map.component";
 import { PeopleSearchComponent } from "./peoplesearch.component/peoplesearch.component";
 import { PeopleDetailsComponent } from "./peopledetails.component/peopledetails.component";
+import { EventsComponent } from "./events.component/events.component";
 import { LoginComponent } from "./login-component/login.component";
 import { AuthGuard } from "./auth-service/auth-guard.service";
 import { UploadComponent } from "./upload-component/upload.component";
@@ -46,6 +47,11 @@ const appRoutes: Routes = [
     {
         path: "peopledetails/:_id",
         component: PeopleDetailsComponent,
+        canActivate: [AuthGuard]
+    },
+    {
+        path: "events",
+        component: EventsComponent,
         canActivate: [AuthGuard]
     },
     {

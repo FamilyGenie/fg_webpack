@@ -112,7 +112,7 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 					res.send(data);
 				}
 			);
-		} else if (req.body.objectType === "events") {
+		} else if (req.body.objectType === "event") {
       console.log('object: ', req.body.object)
 			EventsModel.findOneAndUpdate(
 				{
@@ -122,7 +122,7 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 				{$set: {
         person_id: req.body.object.person_id,
         type: req.body.object.type,
-        date: req.body.object.date,
+        eventDate: req.body.object.date,
         place: req.body.object.place,
         details: req.body.object.details
 			}},

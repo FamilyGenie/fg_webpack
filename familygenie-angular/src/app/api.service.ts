@@ -10,20 +10,29 @@ import { Http, Headers, Response } from "@angular/http";
 import { Observable } from "rxjs/Observable";
 import "rxjs/Rx";
 import "rxjs/add/observable/throw";
+import { isDevMode } from "@angular/core";
 
 @Injectable()
 export class ApiService {
     // for local storage to get the token to put into the headers
     localStorage: CoolLocalStorage;
 
-    // this is the URL of our server, will need to update if the server changes
-    url: string = "http://familygenie.me:3500";
+    // this is the URL of our server, it is set in the constructor of this function, depending on if we are running in dev mode.
+    url: string;
 
     constructor(
         private http: Http,
         localStorage: CoolLocalStorage
     ) {
         this.localStorage = localStorage;
+
+        // if this is being run in dev mode, point to the local host for the api server. If this is being run in prod mode, point to familygenie server. The assumption is that it will only run on prod mode on our production server running on digital ocean.
+        if (isDevMode()) {
+            this.url = "http://localhost:3500";
+        } else {
+            this.url = "https://familygenie.me:3500";
+        }
+        console.log("Is dev mode:", isDevMode());
     }
 
     // a helper function which returns an object version of the response JSON
