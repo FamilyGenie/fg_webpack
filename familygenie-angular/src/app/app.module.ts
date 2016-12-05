@@ -4,8 +4,6 @@ import { routing } from "./routes";
 import { FormsModule } from "@angular/forms";
 // added for LocalStorage
 import { CoolStorageModule } from "angular2-cool-storage";
-
-// import { HTTP_PROVIDERS } from "@angular/http";
 import { HttpModule } from "@angular/http";
 
 import { AppComponent }  from "./app.component";
