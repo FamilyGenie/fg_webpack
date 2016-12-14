@@ -201,16 +201,16 @@ export class DataService {
         }.bind(this));
     }
 
-    createEvent() {
-        console.log("in dataService.createEvents");
+    createEvent(person_id, type, eventDate, place, details) {
+        console.log("in dataService.createEvents: ", person_id, type, eventDate, place, details);
         return this.apiService.post("/create", JSON.stringify({
             objectType: "event",
             object: {
-                person_id : "",
-                type : "",
-                eventDate : "",
-                place : "",
-                details : ""
+                person_id : person_id,
+                type : type,
+                eventDate : eventDate,
+                place : place,
+                details : details
             }
         })).do(function(res) {
             console.log("after createEvent. Result is:", res);
@@ -282,8 +282,6 @@ export class DataService {
     }
 
     deleteEvent(_id: string) {
-        console.log("in dataService.deleteEvent, with:", _id);
-
         return this.apiService.post("/delete", JSON.stringify({
             objectType: "event",
             _id: _id

@@ -120,11 +120,11 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 					user_id: user
 				},
 				{$set: {
-        person_id: req.body.object.person_id,
-        type: req.body.object.type,
-        eventDate: req.body.object.date,
-        place: req.body.object.place,
-        details: req.body.object.details
+        				person_id: req.body.object.person_id,
+        				type: req.body.object.type,
+        				eventDate: req.body.object.eventDate,
+        				place: req.body.object.place,
+        				details: req.body.object.details
 			}},
 				{new: true},
 				function(err, data) {

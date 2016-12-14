@@ -138,7 +138,6 @@ export class PairBondRelationshipComponent {
                 this.personFullName += " " + person.lName;
             }
         }
-        // this.personFullName = person.fName + " " + person.lName;
     }
 
     openNewDetail () {
@@ -167,14 +166,12 @@ export class PairBondRelationshipComponent {
     }
 
     onSelect (evt) {
-        console.log("in onselect, anything here:", evt, this.pairBondRel);
         this.onUpdate(evt, "personTwo_id");
         this.ngOnInit();
     }
 
     // Does this need to go through PeopleDetails.component????
     deleteRel(_id) {
-        console.log("in pairbond relationship deleteRel, with:", _id);
         this.dataService.deletePairBondRel(_id).subscribe();
     }
 

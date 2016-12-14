@@ -12,6 +12,6 @@ module.exports = function(mongoose) {
     user_id: String
   });
 
-  return EventsModel
+  return EventsModel;
 
 };

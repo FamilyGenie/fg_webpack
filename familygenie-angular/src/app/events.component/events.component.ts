@@ -16,27 +16,27 @@ import { OrderByPipe } from "../pipes/orderBy";
                         <div class="col-xs-2 title bold can-click"
                             (click)="setSortBy('fName')"
                         >
-                            Who
+                            When
                         </div>
                         <div class="col-xs-2 title bold can-click"
                             (click)="setSortBy('mName')"
                         >
-                            What
+                            Who
                         </div>
                         <div class="col-xs-2 title bold can-click"
                             (click)="setSortBy('lName')"
                         >
-                            When
+                            What
                         </div>
                         <div class="col-xs-2 title bold can-click"
                             (click)="setSortBy('birthDate')"
                         >
                             Where
                         </div>
-                        <div class="col-xs-4 title bold can-click"
+                        <div class="col-xs-3 title bold can-click"
                             (click)="setSortBy('birthPlace')"
                         >
-                            Details
+                            Context
                         </div>
                     </div>
                     <events-lineitem
@@ -48,7 +48,11 @@ import { OrderByPipe } from "../pipes/orderBy";
                     <div class="row">
                         <div class="col-xs-1 title">
                             <br>
-                            <button class="btn btn-primary btn-round" (click)="createEvent()">Add Event</button>
+                            <button class="btn btn-primary btn-round" (click)="createEvent('','','','','')">Add Event</button>
+                        </div>
+                        <div class="col-xs-1 title">
+                            <br>
+                            <button class="btn btn-primary btn-round" (click)="addPeopleDatesPre()">Add People Dates</button>
                         </div>
                     </div>
         </div>
@@ -70,7 +74,7 @@ export class EventsComponent {
     }
 
     updateEvent(evt) {
-        console.log("in event.component updateEvent:", evt);
+        // console.log("in event.component updateEvent:", evt);
         this.dataService.updateEvent(evt).subscribe();
     }
 
@@ -96,7 +100,64 @@ export class EventsComponent {
         }
     }
 
-    createEvent() {
-        this.dataService.createEvent().subscribe();
+    createEvent(person_id, type, eventDate, place, details) {
+        this.dataService.createEvent(person_id, type, eventDate, place, details).subscribe();
+    }
+
+    addPeopleDatesPre(): void {
+        if (confirm("If you click Continue, all the birthdays and deaths will that were entered in the People Details page will be added as events, but only if they currently do not exist as an event record. Hit Cancel to abort.")) {
+            this.addPeopleDates();
+        }
+    }
+
+
+    addPeopleDates() {
+        let i: number;
+        let event;
+        let person;
+        let alertTextBirth: string = "Birthdays Added:\n";
+        let alertTextDeath: string = "Deaths Added:\n";
+
+        for (i = 0; i < this.dataService.persons.length; i++) {
+            person = this.dataService.persons[i];
+            // console.log(this.dataService.persons[i].fName);
+            /*******************
+            Check for birthdays to add first
+            ********************/
+            event = this.dataService.events.find(
+                    function(evt) {
+                    return evt.person_id === person._id &&
+                    this.dataService.getFormattedDate(evt.eventDate) === this.dataService.getFormattedDate(person.birthDate) &&
+                    evt.type === "Birthday";
+                    }.bind(this)
+                );
+            if (!event) {
+                // if the event record does not exist, then need to add birthDate to events table only if there is a birthday to add
+                if (person.birthDate) {
+                    alertTextBirth += person.fName + " " + person.lName + " " + person.birthDate + "\n";
+                    this.createEvent(person._id, "Birthday", person.birthDate, person.birthPlace, "Event created from data entered about person");
+                }
+            }
+
+            /*******************
+            Check for deaths to add 
+            ********************/
+            event = this.dataService.events.find(
+                    function(evt) {
+                    return evt.person_id === person._id &&
+                    this.dataService.getFormattedDate(evt.eventDate) === this.dataService.getFormattedDate(person.deathDate) &&
+                    evt.type === "Death";
+                    }.bind(this)
+                );
+            if (!event) {
+                // if the event record does not exist, then need to add deathDate to events table only if there is a birthday to add
+                if (person.deathDate) {
+                    alertTextDeath += person.fName + " " + person.lName + " " + person.deathDate + "\n";
+                    this.createEvent(person._id, "Death", person.deathDate, person.deathPlace, "Event created from data entered about person");
+                }
+            }
+        } // end of looping through each person
+        alert(alertTextBirth);
+        alert(alertTextDeath);
     }
 }

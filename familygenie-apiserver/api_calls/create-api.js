@@ -91,11 +91,11 @@ module.exports = function(app, PersonModel, PairBondRelModel, ParentalRelModel, 
 				res.send(JSON.stringify(data));
 			});
     } else if (req.body.objectType === "event") {
-   		console.log("in create event with user: ", user);
+   		console.log("in create event req.body.object: ", req.body.object);
       object = {
         person_id: req.body.object.person_id,
-        type: req.body.object.person_id,
-        eventDate: req.body.object.date,
+        type: req.body.object.type,
+        eventDate: req.body.object.eventDate,
         place: req.body.object.place,
         details: req.body.object.details,
 		user_id: user

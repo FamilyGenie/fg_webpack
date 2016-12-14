@@ -1,0 +1,46 @@
+<div class="row event-item"> 
+    <div class="col-xs-2 custom-input">
+        <input
+            class="form-control"
+            type="text"
+            [ngModel]="event.eventDate | date:dateFormat"
+            (blur)="onUpdate($event, 'eventDate')"
+        />
+    </div>
+    <div class="col-xs-2 custom-input">
+        <select class="form-control" [ngModel]="event.person_id" (change)="onSelect($event)">
+            <option
+                *ngFor="let person of getAllPeople()" 
+                value= {{person._id}}
+            >{{person.fName}} {{person.lName}}
+            </option>
+        </select>
+    </div>
+    <div class="col-xs-2 custom-input">
+        <input
+            class="form-control"
+            type="text"
+            [ngModel]="event.type"
+            (blur)="onUpdate($event, 'type')"
+        />
+    </div>
+    <div class="col-xs-2 custom-input">
+        <input
+            class="form-control"
+            type="text"
+            [ngModel]="event.place"
+            (blur)="onUpdate($event, 'place')"
+        />
+    </div>
+    <div class="col-xs-3 custom-input">
+        <textarea
+            class="form-control"
+            type="textarea"
+            [ngModel]="event.details"
+            (blur)="onUpdate($event, 'details')"
+        ></textarea>
+    </div>
+    <div class="col-xs-1 custom-input">
+    <button class="btn btn-primary btn-round" (click)="deleteEvent(event._id)">-</button>
+    <div>
+</div>
